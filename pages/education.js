@@ -6,7 +6,7 @@ export default function Education() {
     <div className="h-screen">
       <Favicon />
       <Nav currentPage="Education" />
-      <div className="bg-gray-400 h-full"></div>
+      <div className="bg-green-200 h-full"></div>
     </div>
   );
 }

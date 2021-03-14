@@ -1,12 +1,12 @@
 import Favicon from "../components/favicon";
 import Nav from "../components/nav";
 
-export default function Home() {
+export default function Overview() {
   return (
     <div className="h-screen">
       <Favicon />
-      <Nav currentPage="Home" />
-      <div className="bg-gray-400 h-full"></div>
+      <Nav currentPage="Overview" />
+      <div className="bg-green-200 h-full"></div>
     </div>
   );
 }

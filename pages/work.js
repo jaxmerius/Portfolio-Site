@@ -6,7 +6,7 @@ export default function Work() {
     <div className="h-screen">
       <Favicon />
       <Nav currentPage="Work" />
-      <div className="bg-gray-400 h-full"></div>
+      <div className="bg-green-200 h-full"></div>
     </div>
   );
 }
