@@ -3,12 +3,12 @@ import Nav from "../components/nav";
 
 export default function Contact() {
   return (
-    <div className="h-screen">
+    <div className="h-full sm:h-screen">
       <Favicon />
       <Nav currentPage="Contact" />
       <div className="bg-green-200 h-full">
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 pt-36 w-2/3 font-bold text-xs sm:text-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 pt-36 pb-10 w-2/3 font-bold text-xs sm:text-lg">
             <div className="bg-white rounded-lg shadow-lg text-center my-auto">
               <a href="mailto:mathes974@gmail.com">
                 <img className="w-1/2 mx-auto" src="/mail.png" alt="mail" />

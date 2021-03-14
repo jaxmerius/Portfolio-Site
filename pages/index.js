@@ -8,7 +8,7 @@ export default function Overview() {
       <Nav currentPage="Overview" />
       <div className="bg-green-200 h-full">
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-0 pt-32 sm:pt-28 w-2/3 font-bold text-xs sm:text-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-0 pt-32 sm:pt-36 w-2/3 font-bold text-xs sm:text-lg">
             <div className="sm:col-span-2">
               <img src="/hey.png" alt="hey" className="w-3/4 mx-auto" />
             </div>
