@@ -16,15 +16,13 @@ export default function Contact() {
               </a>
             </div>
             <div className="bg-white rounded-lg shadow-lg text-center my-auto">
-              <a href="https://www.linkedin.com/in/ethan-mathes-63a85a204">
+              <a href="https://www.linkedin.com/in/ethanmathes">
                 <img
                   className="w-1/2 mx-auto"
                   src="/linkedin.png"
                   alt="linkedin"
                 />
-                <div className="pb-6 sm:pb-10">
-                  linkedin.com/in/ethan-mathes-63a85a204
-                </div>
+                <div className="pb-6 sm:pb-10">linkedin.com/in/ethanmathes</div>
               </a>
             </div>
             <div className="bg-white rounded-lg shadow-lg text-center my-auto">
