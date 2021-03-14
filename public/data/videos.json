@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Goblin Defense",
+    "link": "https://youtube.com/embed/Re_zsRh819Q",
+    "description": "The first game I ever created after entering the GIMM program at Boise State. I built it in Adobe Animate in my GIMM 110 class freshman year.",
+    "repo": "https://github.com/jaxmerius/Goblin-Defense"
+  },
+  {
+    "title": "St. Lukes Driving Simulator",
+    "link": "https://youtube.com/embed/FUyO5W_DYKU",
+    "description": "The final project for my Engineering 130 class freshman year. We were tasked with creating a driving simulator in Unity to help rehabilitate patients who had suffered brain damage.",
+    "repo": "https://github.com/jaxmerius/Driving-Simulator",
+    "site": "https://sites.google.com/u.boisestate.edu/thereactionsimulator"
+  },
+  {
+    "title": "Field of War",
+    "link": "https://youtube.com/embed/sXQAof3vDtM",
+    "description": "A game I developed with classmates in my GIMM 250 class, loosely based on Clash Royale. We built it in Adobe Animate. This was the first group development project I worked on in the GIMM program.",
+    "repo": "https://github.com/jaxmerius/Field-Of-War"
+  },
+  {
+    "title": "Personal Space AR App",
+    "link": "https://youtube.com/embed/VaHHNnSRvZw",
+    "description": "An app I developed with classmates in my GIMM 310 class. Originally it was going to be developed in Swift, but the onset of the Corona Virus pandemic caused complications and forced us to switch to Unity's AR Kit. The goal of this project was to help children with autism and other learning disabilities understand personal space.",
+    "repo": "https://github.com/jaxmerius/Personal-Space-AR"
+  },
+  {
+    "title": "Gulag Bears (In Development)",
+    "link": "https://youtube.com/embed/g1gh0jy8IJc",
+    "description": "My final project for the GIMM program, built in Unity. The video above shows my progress at the end of my sophomore year, after beginning development in GIMM 350.",
+    "repo": "https://github.com/jaxmerius/Gulag-Bears"
+  },
+  {
+    "title": "Defense of the Core",
+    "link": "https://youtube.com/embed/H8lzY8Y0SPw",
+    "description": "A game I created with classmates in my GIMM 400 class. We built it in Unity using state machines for the enemies.",
+    "repo": "https://github.com/jaxmerius/Defense-of-the-Core"
+  },
+  {
+    "title": "Spooky Hoops",
+    "link": "https://youtube.com/embed/eCW8auEoaaY",
+    "description": "Another game built with classmates in GIMM 400. For this one we used machine learning to develop the AI opponent.",
+    "repo": "https://github.com/jaxmerius/Spooky-Hoops"
+  },
+  {
+    "title": "Egyptian Conniption",
+    "link": "https://youtube.com/embed/eHKAIl75dvk",
+    "description": "The final game we built in GIMM 400. We built this one in Unreal Engine.",
+    "repo": "https://github.com/jaxmerius/Egyptian-Conniption"
+  }
+]

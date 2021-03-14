@@ -8,12 +8,12 @@ export default function Overview() {
       <Nav currentPage="Overview" />
       <div className="bg-green-200 h-full">
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-0 pt-32 sm:pt-36 w-2/3 font-bold text-xs sm:text-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-0 pt-32 sm:pt-36 w-2/3 font-bold text-sm sm:text-lg">
             <div className="sm:col-span-2">
               <img src="/hey.png" alt="hey" className="w-3/4 mx-auto" />
             </div>
             <div className="sm:col-span-3">
-              <div className="bg-white rounded-lg shadow-lg p-6 overflow-x-visible">
+              <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
                 My name is Ethan Mathes, and this is my website! Here you can
                 check out a bunch of the cool stuff I've done in college. The
                 projects and pieces displayed here are a showcase of my talents,
@@ -36,8 +36,8 @@ export default function Overview() {
         <div className="flex justify-center py-10 sm:pt-10">
           <div className="w-2/3 text-center">
             <div className="text-4xl font-bold">Technical Skills</div>
-            <div className="grid sm:grid-cols-3 gap-8 text-lg mt-6">
-              <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="grid sm:grid-cols-3 gap-8 text-sm sm:text-lg mt-6">
+              <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
                 <div className="font-bold">
                   Programming Languages/Frameworks
                 </div>
@@ -46,14 +46,14 @@ export default function Overview() {
                   Docker
                 </div>
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
                 <div className="font-bold">Art Software</div>
                 <div className="mt-2">
                   Photoshop, Illustrator, Animate, Premier Pro, Maya, Substance
                   Painter
                 </div>
               </div>
-              <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
                 <div className="font-bold">Other Relevant Software</div>
                 <div className="mt-2">
                   Unity, GitHub, GitLab, Visual Studio, AWS, Vercel, Firebase

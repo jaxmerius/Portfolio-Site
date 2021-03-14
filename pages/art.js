@@ -42,11 +42,14 @@ export default function Art() {
             {ArtData.map((img) => {
               var source = "/art/" + img.name;
               return (
-                <div className="bg-white rounded-lg shadow-lg p-6">
+                <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
+                  <div className="text-center text-base sm:text-2xl">
+                    {img.title}
+                  </div>
                   <img
                     src={source}
                     alt={img.name}
-                    className="sm:h-48 mx-auto mb-4 cursor-pointer"
+                    className="sm:h-48 mx-auto my-4 cursor-pointer"
                     onClick={() => {
                       setModalImg(img.name);
                       setShowModal(true);
