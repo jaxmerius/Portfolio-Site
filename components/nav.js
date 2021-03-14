@@ -64,7 +64,7 @@ export default function Nav({ currentPage }) {
       <div className="sm:hidden" id="mobile-menu">
         <div className="pb-3 flex justify-center">
           <a
-            href="#"
+            href="/"
             className={
               currentPage == "Overview"
                 ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -74,7 +74,7 @@ export default function Nav({ currentPage }) {
             Overview
           </a>
           <a
-            href="#"
+            href="/education"
             className={
               currentPage == "Education"
                 ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -84,7 +84,7 @@ export default function Nav({ currentPage }) {
             Education
           </a>
           <a
-            href="#"
+            href="/work"
             className={
               currentPage == "Work"
                 ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -94,7 +94,7 @@ export default function Nav({ currentPage }) {
             Work
           </a>
           <a
-            href="#"
+            href="/contact"
             className={
               currentPage == "Contact"
                 ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
