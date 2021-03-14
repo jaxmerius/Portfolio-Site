@@ -25,24 +25,24 @@ export default function Nav({ currentPage }) {
                   Overview
                 </a>
                 <a
-                  href="/education"
+                  href="/art"
                   className={
-                    currentPage == "Education"
+                    currentPage == "Art"
                       ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                       : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   }
                 >
-                  Education
+                  Art
                 </a>
                 <a
-                  href="/work"
+                  href="/development"
                   className={
-                    currentPage == "Work"
+                    currentPage == "Development"
                       ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                       : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   }
                 >
-                  Work
+                  Development
                 </a>
                 <a
                   href="/contact"
