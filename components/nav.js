@@ -1,6 +1,7 @@
 export default function Nav({ currentPage }) {
   return (
     <nav className="fixed bg-green-600 w-full shadow">
+      {/* desktop menu */}
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
@@ -60,7 +61,7 @@ export default function Nav({ currentPage }) {
         </div>
       </div>
 
-      {/* Mobile menu, show/hide based on menu state. */}
+      {/* mobile menu */}
       <div className="sm:hidden" id="mobile-menu">
         <div className="pb-3 flex justify-center">
           <a
