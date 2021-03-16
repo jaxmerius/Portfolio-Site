@@ -10,7 +10,9 @@ export default function Art() {
   return (
     <div className="h-full">
       <Favicon />
-      <Nav currentPage="Art" />
+      <div className="relative z-50">
+        <Nav currentPage="Art" />
+      </div>
       <div className="bg-green-200 h-full">
         {showModal ? (
           <>
@@ -42,7 +44,7 @@ export default function Art() {
             {ArtData.map((img) => {
               var source = "/art/" + img.name;
               return (
-                <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
+                <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 relative inline-block z-0">
                   <div className="text-center text-base sm:text-2xl">
                     {img.title}
                   </div>
@@ -55,7 +57,17 @@ export default function Art() {
                       setShowModal(true);
                     }}
                   />
+
                   <div className="text-center">{img.description}</div>
+                  <img
+                    src="/magnify.png"
+                    alt="magnify"
+                    className="absolute bottom-1.5 sm:bottom-2 right-1.5 sm:right-2 w-4 sm:w-6 cursor-pointer"
+                    onClick={() => {
+                      setModalImg(img.name);
+                      setShowModal(true);
+                    }}
+                  />
                 </div>
               );
             })}
