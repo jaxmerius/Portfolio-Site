@@ -12,7 +12,9 @@ export default function Contact() {
             <div className="bg-white rounded-lg shadow-lg text-center my-auto">
               <a href="mailto:mathes974@gmail.com">
                 <img className="w-1/2 mx-auto" src="/mail.png" alt="mail" />
-                <div className="pb-6 sm:pb-10">mathes974@gmail.com</div>
+                <div className="text-blue-400 hover:text-blue-500 pb-6 sm:pb-10">
+                  mathes974@gmail.com
+                </div>
               </a>
             </div>
             <div className="bg-white rounded-lg shadow-lg text-center my-auto">
@@ -22,13 +24,17 @@ export default function Contact() {
                   src="/linkedin.png"
                   alt="linkedin"
                 />
-                <div className="pb-6 sm:pb-10">linkedin.com/in/ethanmathes</div>
+                <div className="text-blue-400 hover:text-blue-500 pb-6 sm:pb-10">
+                  linkedin.com/in/ethanmathes
+                </div>
               </a>
             </div>
             <div className="bg-white rounded-lg shadow-lg text-center my-auto">
               <a href="https://www.github.com/jaxmerius">
                 <img className="w-1/2 mx-auto" src="/github.png" alt="github" />
-                <div className="pb-6 sm:pb-10">github.com/jaxmerius</div>
+                <div className="text-blue-400 hover:text-blue-500 pb-6 sm:pb-10">
+                  github.com/jaxmerius
+                </div>
               </a>
             </div>
           </div>
