@@ -1,11 +1,11 @@
 import Favicon from "../components/favicon";
 import Nav from "../components/nav";
 
-export default function Contact() {
+export default function Links() {
   return (
     <div className="h-full sm:h-screen">
       <Favicon />
-      <Nav currentPage="Contact" />
+      <Nav currentPage="Links" />
       <div className="bg-green-200 h-full">
         <div className="flex justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 pt-36 pb-10 w-2/3 font-bold text-xs sm:text-lg">

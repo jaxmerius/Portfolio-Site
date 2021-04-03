@@ -46,14 +46,14 @@ export default function Nav({ currentPage }) {
                   Development
                 </a>
                 <a
-                  href="/contact"
+                  href="/links"
                   className={
-                    currentPage == "Contact"
+                    currentPage == "Links"
                       ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                       : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   }
                 >
-                  Contact Me
+                  Links
                 </a>
               </div>
             </div>
@@ -95,14 +95,14 @@ export default function Nav({ currentPage }) {
             Development
           </a>
           <a
-            href="/contact"
+            href="/links"
             className={
-              currentPage == "Contact"
+              currentPage == "Links"
                 ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                 : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             }
           >
-            Contact Me
+            Links
           </a>
         </div>
       </div>
