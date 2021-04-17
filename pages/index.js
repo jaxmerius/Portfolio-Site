@@ -1,10 +1,11 @@
-import Favicon from "../components/favicon";
+import HeadInfo from "../components/head";
 import Nav from "../components/nav";
 
 export default function Overview() {
   return (
     <div className="h-full">
-      <Favicon />
+      <title>Ethan Mathes</title>
+      <HeadInfo />
       <Nav currentPage="Overview" />
       <div className="bg-green-200 h-full">
         <div className="flex justify-center">
@@ -38,9 +39,7 @@ export default function Overview() {
             <div className="text-4xl font-bold">Technical Skills</div>
             <div className="grid sm:grid-cols-3 gap-8 text-sm sm:text-lg mt-6">
               <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
-                <div className="font-bold">
-                  Programming Languages/Frameworks
-                </div>
+                <div className="font-bold">Languages/Frameworks</div>
                 <div className="mt-2">
                   NodeJS, JSON, NextJS, ReactJS, React Native, TypeScript, C#,
                   Docker
@@ -103,7 +102,7 @@ export default function Overview() {
               <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
                 <div className="font-bold">General Info</div>
                 <div className="mt-2">
-                  Pursuing a Bachelor's of Science degree through the College of
+                  Pursuing a Bachelor of Science degree through the College of
                   Innovation and Design at Boise State University. Planning to
                   graduate in May of 2021.
                 </div>

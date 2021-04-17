@@ -1,4 +1,4 @@
-import Favicon from "../components/favicon";
+import HeadInfo from "../components/head";
 import Nav from "../components/nav";
 import ArtData from "../public/data/art.json";
 import { useState } from "react";
@@ -9,7 +9,7 @@ export default function Art() {
 
   return (
     <div className="h-full">
-      <Favicon />
+      <HeadInfo />
       <div className="relative z-50">
         <Nav currentPage="Art" />
       </div>

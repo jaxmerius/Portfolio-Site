@@ -1,10 +1,10 @@
-import Favicon from "../components/favicon";
+import HeadInfo from "../components/head";
 import Nav from "../components/nav";
 
 export default function Links() {
   return (
     <div className="h-full sm:h-screen">
-      <Favicon />
+      <HeadInfo />
       <Nav currentPage="Links" />
       <div className="bg-green-200 h-full">
         <div className="flex justify-center">

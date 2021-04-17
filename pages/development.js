@@ -1,11 +1,11 @@
-import Favicon from "../components/favicon";
+import HeadInfo from "../components/head";
 import Nav from "../components/nav";
 import Videos from "../public/data/videos.json";
 
 export default function Development() {
   return (
     <div className="h-full">
-      <Favicon />
+      <HeadInfo />
       <div className="relative z-50">
         <Nav currentPage="Development" />
       </div>
