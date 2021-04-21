@@ -79,17 +79,9 @@ export default function Overview() {
                     BF Innovative Technologies{" "}
                   </a>
                   since April of 2020. During my time at this company I've
-                  worked on a number of projects, including
-                  <a
-                    href="https://www.fivepencilmethod.com/"
-                    className="text-blue-400 hover:text-blue-500"
-                  >
-                    {" "}
-                    Five Pencil Method{" "}
-                  </a>
-                  and it's companion app. Throughout my time here I've primarily
-                  worked with NodeJS, NextJS, and Typescript but I've also
-                  worked on projects with Windows .NET applications.
+                  worked on a number of projects. Throughout my time here I've
+                  primarily worked with NodeJS, NextJS, and Typescript but I've
+                  also worked on projects with Windows .NET applications.
                 </div>
               </div>
             </div>
