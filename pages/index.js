@@ -11,7 +11,7 @@ export default function Overview() {
       </div>
       <div className="bg-green-200 h-full">
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-0 pt-32 sm:pt-36 w-2/3 text-sm sm:text-lg z-0">
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-0 pt-32 sm:pt-36 text-sm w-2/3 sm:text-lg z-0">
             <div className="sm:col-span-2">
               <img src="/hey.png" alt="hey" className="w-3/4 mx-auto" />
             </div>
@@ -64,7 +64,7 @@ export default function Overview() {
             <div className="text-4xl font-bold">Technical Skills</div>
             <div className="grid sm:grid-cols-3 gap-8 text-sm sm:text-lg mt-6">
               <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
-                <div className="font-bold">Languages/Frameworks</div>
+                <div className="font-bold">Languages/ Frameworks</div>
                 <div className="mt-2">
                   NodeJS, JSON, NextJS, ReactJS, React Native, TypeScript, C#,
                   Docker
