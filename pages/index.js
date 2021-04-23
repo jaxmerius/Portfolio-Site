@@ -6,10 +6,12 @@ export default function Overview() {
     <div className="h-full">
       <title>Ethan Mathes</title>
       <HeadInfo />
-      <Nav currentPage="Overview" />
+      <div className="relative z-50">
+        <Nav currentPage="Overview" />
+      </div>
       <div className="bg-green-200 h-full">
         <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-0 pt-32 sm:pt-36 w-2/3 text-sm sm:text-lg">
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 sm:gap-0 pt-32 sm:pt-36 w-2/3 text-sm sm:text-lg z-0">
             <div className="sm:col-span-2">
               <img src="/hey.png" alt="hey" className="w-3/4 mx-auto" />
             </div>
@@ -30,6 +32,29 @@ export default function Overview() {
                   BF Innovative Technologies
                 </a>
                 ! So look around, enjoy, and feel free to contact me.
+              </div>
+            </div>
+            <div className="sm:col-span-5 bg-white rounded-lg shadow-lg p-4 sm:p-6 sm:mt-10 mt-5">
+              <div
+                style={{
+                  position: "relative",
+                  paddingBottom: "56.25%",
+                  height: 0,
+                }}
+              >
+                <iframe
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/FjZ-UJ0WagY"
+                  allowFullScreen
+                />
               </div>
             </div>
           </div>
