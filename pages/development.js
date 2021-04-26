@@ -1,23 +1,18 @@
-import HeadInfo from "../components/head";
-import Nav from "../components/nav";
+import Import from "../components/import";
+import { Body, Bubble, ContentWrapper, Grid, Link } from "../components/styles";
 import Videos from "../public/data/videos.json";
 
 export default function Development() {
   return (
-    <div className="h-full">
-      <HeadInfo />
-      <div className="relative z-50">
-        <Nav currentPage="Development" />
-      </div>
-      <div className="bg-green-200 h-full">
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 pb-10 pt-36 w-2/3 font-bold text-xs sm:text-lg z-0">
-            {Videos.map((video) => {
-              return (
-                <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6">
-                  <div className="text-center text-base sm:text-2xl">
-                    {video.title}
-                  </div>
+    <div className={Body}>
+      <Import currentPage="Development" />
+      <div className={ContentWrapper}>
+        <div className={`md:grid-cols-2 ${Grid}`}>
+          {Videos.map((video) => {
+            return (
+              <div className={Bubble}>
+                <div className="text-3xl font-bold">{video.title}</div>
+                <div>
                   <div
                     style={{
                       position: "relative",
@@ -40,37 +35,26 @@ export default function Development() {
                       allowFullScreen
                     />
                   </div>
-                  <div className="text-center mb-auto">{video.description}</div>
-                  <hr className="my-4" />
-                  {video.site ? (
-                    <div className="text-center grid grid-cols-2">
-                      <a
-                        href={video.repo}
-                        className="text-blue-400 hover:text-blue-500"
-                      >
-                        Github
-                      </a>
-                      <a
-                        href={video.site}
-                        className="text-blue-400 hover:text-blue-500"
-                      >
-                        Site
-                      </a>
-                    </div>
-                  ) : (
-                    <div className="text-center">
-                      <a
-                        href={video.repo}
-                        className="text-blue-400 hover:text-blue-500"
-                      >
-                        Github
-                      </a>
-                    </div>
-                  )}
                 </div>
-              );
-            })}
-          </div>
+                <div className="flex-grow">{video.description}</div>
+                <hr className="my-4" />
+                {video.site ? (
+                  <div className="grid grid-cols-2">
+                    <a href={video.repo} className={Link}>
+                      Github
+                    </a>
+                    <a href={video.site} className={Link}>
+                      Site
+                    </a>
+                  </div>
+                ) : (
+                  <a href={video.repo} className={Link}>
+                    Github
+                  </a>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

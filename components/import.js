@@ -1,6 +1,12 @@
+import Head from "next/head";
+
 export default function Nav({ currentPage }) {
   return (
-    <nav className="fixed bg-green-600 w-full shadow">
+    <nav className="fixed bg-green-700 w-full shadow z-10">
+      <Head>
+        <title>Ethan Mathes</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+      </Head>
       {/* desktop menu */}
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
@@ -20,7 +26,7 @@ export default function Nav({ currentPage }) {
                   className={
                     currentPage == "Overview"
                       ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-white hover:bg-green-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   }
                 >
                   Overview
@@ -30,7 +36,7 @@ export default function Nav({ currentPage }) {
                   className={
                     currentPage == "Art"
                       ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-white hover:bg-green-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   }
                 >
                   Art
@@ -40,7 +46,7 @@ export default function Nav({ currentPage }) {
                   className={
                     currentPage == "Development"
                       ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-white hover:bg-green-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   }
                 >
                   Development
@@ -50,7 +56,7 @@ export default function Nav({ currentPage }) {
                   className={
                     currentPage == "Links"
                       ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                      : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                      : "text-white hover:bg-green-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   }
                 >
                   Links
@@ -69,7 +75,7 @@ export default function Nav({ currentPage }) {
             className={
               currentPage == "Overview"
                 ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                : "text-white px-3 py-2 rounded-md text-sm font-medium"
             }
           >
             Overview
@@ -79,7 +85,7 @@ export default function Nav({ currentPage }) {
             className={
               currentPage == "Art"
                 ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                : "text-white px-3 py-2 rounded-md text-sm font-medium"
             }
           >
             Art
@@ -89,7 +95,7 @@ export default function Nav({ currentPage }) {
             className={
               currentPage == "Development"
                 ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                : "text-white px-3 py-2 rounded-md text-sm font-medium"
             }
           >
             Development
@@ -99,7 +105,7 @@ export default function Nav({ currentPage }) {
             className={
               currentPage == "Links"
                 ? "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                : "text-white hover:bg-green-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                : "text-white px-3 py-2 rounded-md text-sm font-medium"
             }
           >
             Links

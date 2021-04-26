@@ -1,6 +1,8 @@
-import HeadInfo from "../components/head";
-import Nav from "../components/nav";
+import Import from "../components/import";
+import { Body, Bubble, ContentWrapper, Grid } from "../components/styles";
 import ArtData from "../public/data/art.json";
+import Image from "next/image";
+import LazyLoad from "react-lazyload";
 import { useState } from "react";
 
 export default function Art() {
@@ -8,70 +10,65 @@ export default function Art() {
   const [modalImg, setModalImg] = useState();
 
   return (
-    <div className="h-full">
-      <HeadInfo />
-      <div className="relative z-50">
-        <Nav currentPage="Art" />
-      </div>
-      <div className="bg-green-200 h-full">
+    <div className={Body}>
+      <Import currentPage="Art" />
+      <div className={ContentWrapper}>
         {showModal ? (
           <>
             <div
               className="justify-center items-center flex fixed inset-0 z-50"
               onClick={() => setShowModal(false)}
             >
-              <div className="relative w-auto max-w-sm sm:max-w-3xl">
-                <div className="rounded-lg bg-white">
-                  <div>
-                    <button
-                      className="w-full text-red-800 text-3xl sm:text-4xl font-bold text-right pr-2 sm:pr-6 hover:text-red-400"
-                      onClick={() => setShowModal(false)}
-                    >
-                      ×
-                    </button>
-                  </div>
-                  <div className="pt-1 sm:pt-2 pb-2 sm:pb-6 px-2 sm:px-6">
-                    <img src={"/art/" + modalImg} alt={modalImg} />
-                  </div>
+              <div className="relative w-auto max-w-sm sm:max-w-l md:max-w-xl lg:max-w-3xl">
+                <div className={Bubble}>
+                  <button
+                    className="absolute right-5 sm:right-7 md:right-8 top-3 sm:top-5 focus:outline-none text-red-800 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold hover:text-red-400"
+                    onClick={() => setShowModal(false)}
+                  >
+                    &times;
+                  </button>
+                  <img src={"/art/" + modalImg} alt={modalImg} />
                 </div>
               </div>
             </div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 pt-36 pb-10 w-2/3 font-bold text-xs sm:text-lg">
-            {ArtData.map((img) => {
-              var source = "/art/" + img.name;
-              return (
-                <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 relative inline-block z-0">
-                  <div className="text-center text-base sm:text-2xl">
-                    {img.title}
-                  </div>
-                  <img
-                    src={source}
-                    alt={img.name}
-                    className="sm:h-48 mx-auto my-4 cursor-pointer"
-                    onClick={() => {
-                      setModalImg(img.name);
-                      setShowModal(true);
-                    }}
-                  />
-
-                  <div className="text-center">{img.description}</div>
-                  <img
-                    src="/magnify.png"
-                    alt="magnify"
-                    className="absolute bottom-1.5 sm:bottom-2 right-1.5 sm:right-2 w-4 sm:w-6 cursor-pointer"
-                    onClick={() => {
-                      setModalImg(img.name);
-                      setShowModal(true);
-                    }}
-                  />
+        <div className={`md:grid-cols-3 ${Grid}`}>
+          {ArtData.map((img) => {
+            var source = "/art/" + img.name;
+            return (
+              <div className={`relative z-0 flex flex-col ${Bubble}`}>
+                <div className="text-3xl font-bold flex-grow">{img.title}</div>
+                <div className="my-4 flex-grow">
+                  <LazyLoad>
+                    <Image
+                      src={source}
+                      alt={img.name}
+                      className="mx-auto cursor-pointer"
+                      width={img.width}
+                      height={img.height}
+                      layout="responsive"
+                      onClick={() => {
+                        setModalImg(img.name);
+                        setShowModal(true);
+                      }}
+                    />
+                  </LazyLoad>
                 </div>
-              );
-            })}
-          </div>
+                <div>{img.description}</div>
+                <img
+                  src="/magnify.png"
+                  alt="magnify"
+                  className="absolute bottom-1.5 md:bottom-2 right-1.5 md:right-2 w-4 md:w-6 cursor-pointer"
+                  onClick={() => {
+                    setModalImg(img.name);
+                    setShowModal(true);
+                  }}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
