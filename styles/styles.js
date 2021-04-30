@@ -5,3 +5,7 @@ export const ContentWrapper =
 export const Grid =
   "grid md:gap-8 sm:gap-6 gap-4 md:text-lg sm:text-base text-sm text-center";
 export const Link = "text-blue-400 hover:text-blue-500";
+export const NavBtn =
+  "text-white hover:bg-green-800 px-3 py-2 rounded-md text-sm font-medium focus:outline-none";
+export const NavSelected =
+  "bg-green-900 text-white px-3 py-2 rounded-md text-sm font-medium focus:outline-none";
