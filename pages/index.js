@@ -6,7 +6,7 @@ import Art from "./art";
 import Development from "./development";
 import Links from "./links";
 
-export default function test() {
+export default function Index() {
   const [currentPage, setCurrentPage] = useState("Overview");
 
   const handleNav = (e) => {
