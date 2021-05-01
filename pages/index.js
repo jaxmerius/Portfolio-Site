@@ -7,9 +7,7 @@ import Development from "./development";
 import Links from "./links";
 
 export default function Index() {
-  const [currentPage, setCurrentPage] = useState();
-
-  !currentPage ? setCurrentPage("Overview") : null;
+  const [currentPage, setCurrentPage] = useState("Overview");
 
   const handleNav = (e) => {
     currentPage != e.target.value ? setCurrentPage(e.target.value) : null;
