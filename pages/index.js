@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { useState } from "react";
-import { Body, ContentWrapper, NavBtn } from "../styles/styles";
 import Overview from "./overview";
 import Art from "./art";
 import Development from "./development";
@@ -17,7 +16,7 @@ export default function Index() {
   const NavButton = ({ value }) => {
     return (
       <button
-        className={`${NavBtn} ${
+        className={`text-green-400 hover:bg-gray-600 px-3 py-2 rounded-md text-sm focus:outline-none ${
           currentPage == value ? "border border-green-800" : null
         }`}
         onClick={handleNav}
@@ -29,7 +28,7 @@ export default function Index() {
   };
 
   return (
-    <div className={Body}>
+    <div className="min-h-screen h-full bg-gray-900 text-gray-300">
       <nav className="fixed bg-gray-700 w-full border-b border-green-400 z-10">
         <Head>
           <title>Ethan Mathes</title>
@@ -41,7 +40,7 @@ export default function Index() {
               <div className="flex-shrink-0 flex items-center">
                 <img className="block h-8 w-auto" src="/logo.png" alt="Logo" />
               </div>
-              <div className="flex-shrink-0 flex items-center text-gray-300 px-3 py-2 rounded-md text-2xl font-medium">
+              <div className="flex-shrink-0 flex items-center text-gray-300 px-3 py-2 rounded-md text-2xl">
                 ETHAN MATHES
               </div>
             </div>
@@ -66,7 +65,7 @@ export default function Index() {
           </div>
         </div>
       </nav>
-      <div className={ContentWrapper}>
+      <div className="h-full flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-24 pb-5 sm:pb-10">
         {currentPage == "Overview" ? (
           <Overview />
         ) : currentPage == "Art" ? (

@@ -1,4 +1,4 @@
-import { Bubble, Grid } from "../styles/styles";
+import { bubble, grid } from "../styles/styles";
 import ArtData from "../public/data/art.json";
 import { useState } from "react";
 
@@ -7,7 +7,7 @@ export default function Art() {
   const [modalImg, setModalImg] = useState();
 
   return (
-    <div className={`lg:grid-cols-3 md:grid-cols-2 ${Grid}`}>
+    <div className={`lg:grid-cols-3 md:grid-cols-2 ${grid}`}>
       {showModal ? (
         <>
           <div
@@ -15,7 +15,7 @@ export default function Art() {
             onClick={() => setShowModal(false)}
           >
             <div className="relative w-auto max-w-sm sm:max-w-l md:max-w-xl lg:max-w-3xl">
-              <div className={Bubble}>
+              <div className={bubble}>
                 <button
                   className="absolute right-5 sm:right-7 md:right-8 top-3 sm:top-5 focus:outline-none text-red-700 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold hover:text-red-500"
                   onClick={() => setShowModal(false)}
@@ -34,7 +34,7 @@ export default function Art() {
       </div>
       {ArtData.map((img) => {
         return (
-          <div className={`relative z-0 flex flex-col ${Bubble}`}>
+          <div className={`relative z-0 flex flex-col ${bubble}`}>
             <div className="text-green-400 text-3xl font-bold flex-grow">
               {img.title}
             </div>

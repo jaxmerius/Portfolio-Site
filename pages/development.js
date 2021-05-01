@@ -1,15 +1,15 @@
-import { Bubble, Grid, Link } from "../styles/styles";
-import Videos from "../public/data/videos.json";
+import { bubble, grid, link } from "../styles/styles";
+import videos from "../public/data/videos.json";
 
 export default function Development() {
   return (
-    <div className={`lg:grid-cols-2 ${Grid}`}>
+    <div className={`lg:grid-cols-2 ${grid}`}>
       <div className="lg:col-span-2 text-4xl font-bold">
         Development Projects
       </div>
-      {Videos.map((video) => {
+      {videos.map((video) => {
         return (
-          <div className={Bubble}>
+          <div className={bubble}>
             <div className="text-green-400 text-3xl font-bold">
               {video.title}
             </div>
@@ -41,15 +41,15 @@ export default function Development() {
             <hr className="my-4 border border-green-800" />
             {video.site ? (
               <div className="grid grid-cols-2">
-                <a href={video.repo} className={Link}>
+                <a href={video.repo} className={link}>
                   Github
                 </a>
-                <a href={video.site} className={Link}>
+                <a href={video.site} className={link}>
                   Site
                 </a>
               </div>
             ) : (
-              <a href={video.repo} className={Link}>
+              <a href={video.repo} className={link}>
                 Github
               </a>
             )}
