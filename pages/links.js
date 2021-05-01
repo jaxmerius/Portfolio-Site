@@ -2,7 +2,10 @@ import { Bubble, Grid, Link } from "../styles/styles";
 
 export default function Links() {
   return (
-    <div className={`md:grid-cols-3 ${Grid}`}>
+    <div className={`lg:grid-cols-3 md:grid-cols-2 ${Grid}`}>
+      <div className="lg:col-span-3 md:col-span-2 text-4xl font-bold">
+        Relevant Links
+      </div>
       <div className={Bubble}>
         <a href="mailto:mathes974@gmail.com">
           <img className="w-2/3 mx-auto" src="/mail.png" alt="mail" />

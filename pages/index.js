@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
-import { Body, ContentWrapper, NavBtn, NavSelected } from "../styles/styles";
+import { Body, ContentWrapper, NavBtn } from "../styles/styles";
 import Overview from "./overview";
 import Art from "./art";
 import Development from "./development";
@@ -14,9 +14,23 @@ export default function Index() {
     window.scrollTo(0, 0);
   };
 
+  const NavButton = ({ value }) => {
+    return (
+      <button
+        className={`${NavBtn} ${
+          currentPage == value ? "border border-green-800" : null
+        }`}
+        onClick={handleNav}
+        value={value}
+      >
+        {value}
+      </button>
+    );
+  };
+
   return (
     <div className={Body}>
-      <nav className="fixed bg-green-700 w-full shadow z-10">
+      <nav className="fixed bg-gray-700 w-full border-b border-green-400 z-10">
         <Head>
           <title>Ethan Mathes</title>
           <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
@@ -27,43 +41,17 @@ export default function Index() {
               <div className="flex-shrink-0 flex items-center">
                 <img className="block h-8 w-auto" src="/logo.png" alt="Logo" />
               </div>
-              <div className="flex-shrink-0 flex items-center text-white px-3 py-2 rounded-md text-2xl font-medium">
+              <div className="flex-shrink-0 flex items-center text-gray-300 px-3 py-2 rounded-md text-2xl font-medium">
                 ETHAN MATHES
               </div>
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <div className="hidden sm:block sm:ml-6">
                 <div className="flex space-x-4">
-                  <button
-                    className={currentPage == "Overview" ? NavSelected : NavBtn}
-                    onClick={handleNav}
-                    value="Overview"
-                  >
-                    Overview
-                  </button>
-                  <button
-                    className={currentPage == "Art" ? NavSelected : NavBtn}
-                    onClick={handleNav}
-                    value="Art"
-                  >
-                    Art
-                  </button>
-                  <button
-                    className={
-                      currentPage == "Development" ? NavSelected : NavBtn
-                    }
-                    onClick={handleNav}
-                    value="Development"
-                  >
-                    Development
-                  </button>
-                  <button
-                    className={currentPage == "Links" ? NavSelected : NavBtn}
-                    onClick={handleNav}
-                    value="Links"
-                  >
-                    Links
-                  </button>
+                  <NavButton value="Overview" />
+                  <NavButton value="Art" />
+                  <NavButton value="Development" />
+                  <NavButton value="Links" />
                 </div>
               </div>
             </div>
@@ -71,34 +59,10 @@ export default function Index() {
         </div>
         <div className="sm:hidden" id="mobile-menu">
           <div className="pb-3 flex justify-center">
-            <button
-              className={currentPage == "Overview" ? NavSelected : NavBtn}
-              onClick={handleNav}
-              value="Overview"
-            >
-              Overview
-            </button>
-            <button
-              className={currentPage == "Art" ? NavSelected : NavBtn}
-              onClick={handleNav}
-              value="Art"
-            >
-              Art
-            </button>
-            <button
-              className={currentPage == "Development" ? NavSelected : NavBtn}
-              onClick={handleNav}
-              value="Development"
-            >
-              Development
-            </button>
-            <button
-              className={currentPage == "Links" ? NavSelected : NavBtn}
-              onClick={handleNav}
-              value="Links"
-            >
-              Links
-            </button>
+            <NavButton value="Overview" />
+            <NavButton value="Art" />
+            <NavButton value="Development" />
+            <NavButton value="Links" />
           </div>
         </div>
       </nav>

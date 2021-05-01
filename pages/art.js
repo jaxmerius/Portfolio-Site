@@ -7,7 +7,7 @@ export default function Art() {
   const [modalImg, setModalImg] = useState();
 
   return (
-    <div>
+    <div className={`lg:grid-cols-3 md:grid-cols-2 ${Grid}`}>
       {showModal ? (
         <>
           <div
@@ -17,7 +17,7 @@ export default function Art() {
             <div className="relative w-auto max-w-sm sm:max-w-l md:max-w-xl lg:max-w-3xl">
               <div className={Bubble}>
                 <button
-                  className="absolute right-5 sm:right-7 md:right-8 top-3 sm:top-5 focus:outline-none text-red-800 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold hover:text-red-400"
+                  className="absolute right-5 sm:right-7 md:right-8 top-3 sm:top-5 focus:outline-none text-red-700 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold hover:text-red-500"
                   onClick={() => setShowModal(false)}
                 >
                   &times;
@@ -26,40 +26,42 @@ export default function Art() {
               </div>
             </div>
           </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          <div className="opacity-50 fixed inset-0 z-40 bg-black"></div>
         </>
       ) : null}
-      <div className={`md:grid-cols-3 ${Grid}`}>
-        {ArtData.map((img) => {
-          var source = "/art/" + img.name;
-          return (
-            <div className={`relative z-0 flex flex-col ${Bubble}`}>
-              <div className="text-3xl font-bold flex-grow">{img.title}</div>
-              <div className="my-4 flex-grow">
-                <img
-                  src={source}
-                  alt={img.name}
-                  className="mx-auto cursor-pointer"
-                  onClick={() => {
-                    setModalImg(img.name);
-                    setShowModal(true);
-                  }}
-                />
-              </div>
-              <div>{img.description}</div>
+      <div className="lg:col-span-3 md:col-span-2 text-4xl font-bold">
+        Artwork
+      </div>
+      {ArtData.map((img) => {
+        return (
+          <div className={`relative z-0 flex flex-col ${Bubble}`}>
+            <div className="text-green-400 text-3xl font-bold flex-grow">
+              {img.title}
+            </div>
+            <div className="my-4 flex-grow">
               <img
-                src="/magnify.png"
-                alt="magnify"
-                className="absolute bottom-1.5 md:bottom-2 right-1.5 md:right-2 w-4 md:w-6 cursor-pointer"
+                src={"/art/" + img.name}
+                alt={img.name}
+                className="mx-auto cursor-pointer"
                 onClick={() => {
                   setModalImg(img.name);
                   setShowModal(true);
                 }}
               />
             </div>
-          );
-        })}
-      </div>
+            <div className="px-2">{img.description}</div>
+            <img
+              src="/magnify.png"
+              alt="magnify"
+              className="absolute bottom-1.5 md:bottom-2 right-1.5 md:right-2 w-4 md:w-6 cursor-pointer"
+              onClick={() => {
+                setModalImg(img.name);
+                setShowModal(true);
+              }}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }

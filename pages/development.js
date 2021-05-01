@@ -3,11 +3,16 @@ import Videos from "../public/data/videos.json";
 
 export default function Development() {
   return (
-    <div className={`md:grid-cols-2 ${Grid}`}>
+    <div className={`lg:grid-cols-2 ${Grid}`}>
+      <div className="lg:col-span-2 text-4xl font-bold">
+        Development Projects
+      </div>
       {Videos.map((video) => {
         return (
           <div className={Bubble}>
-            <div className="text-3xl font-bold">{video.title}</div>
+            <div className="text-green-400 text-3xl font-bold">
+              {video.title}
+            </div>
             <div>
               <div
                 style={{
@@ -32,8 +37,8 @@ export default function Development() {
                 />
               </div>
             </div>
-            <div className="flex-grow">{video.description}</div>
-            <hr className="my-4" />
+            <div className="flex-grow px-2">{video.description}</div>
+            <hr className="my-4 border border-green-800" />
             {video.site ? (
               <div className="grid grid-cols-2">
                 <a href={video.repo} className={Link}>
