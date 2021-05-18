@@ -1,9 +1,9 @@
 import { bubble, grid, link } from "../styles/styles";
 
 export default function Overview() {
-  const Bubble = ({ title, content, columns }) => {
+  const Bubble = ({ title, content, colSpan }) => {
     return (
-      <div className={`md:col-span-${columns} ${bubble}`}>
+      <div className={`md:${colSpan} ${bubble}`}>
         <div className="font-bold text-green-400">{title}</div>
         <div className="mt-2">{content}</div>
       </div>
@@ -19,21 +19,25 @@ export default function Overview() {
       <div className="text-green-400 md:col-span-2 text-5xl sm:text-6xl md:text-7xl font-bold flex m-auto">
         About Me
       </div>
-      <div className={`md:col-span-4 ${bubble}`}>
-        <div>
-          I'm Ethan Mathes, and this is my website! Here you can check out a
-          bunch of the cool stuff I've done in college. The projects and pieces
-          displayed here are a showcase of my talents, skills, and knowledge
-          acquired through my studies. I'm majoring in Games, Interactive Media,
-          and Mobile with a minor in Information Technology Management. I am
-          also currently working as a software developer at
-          <a href="https://bfitec.com" className={link}>
-            {" "}
-            BF Innovative Technologies
-          </a>
-          ! So look around, enjoy, and feel free to contact me.
-        </div>
-      </div>
+      <Bubble
+        title=""
+        content={
+          <div>
+            I'm Ethan Mathes, and this is my website! Here you can check out a
+            bunch of the cool stuff I've done in college. The projects and
+            pieces displayed here are a showcase of my talents, skills, and
+            knowledge acquired through my studies. I'm majoring in Games,
+            Interactive Media, and Mobile with a minor in Information Technology
+            Management. I am also currently working as a software developer at
+            <a href="https://bfitec.com" className={link}>
+              {" "}
+              BF Innovative Technologies
+            </a>
+            ! So look around, enjoy, and feel free to contact me.
+          </div>
+        }
+        colSpan="col-span-4"
+      />
       <div className={`md:col-span-6 ${bubble}`}>
         <div
           style={{
@@ -61,17 +65,17 @@ export default function Overview() {
       <Bubble
         title="Languages/ Frameworks"
         content="NodeJS, JSON, NextJS, ReactJS, React Native, TypeScript, C#, Docker"
-        columns="2"
+        colSpan="col-span-2"
       />
       <Bubble
         title="Art Software"
         content="Photoshop, Illustrator, Animate, Premier Pro, Maya, Substance Painter"
-        columns="2"
+        colSpan="col-span-2"
       />
       <Bubble
         title="Other Relevant Software"
         content="Unity, GitHub, GitLab, Visual Studio, AWS, Vercel, Firebase"
-        columns="2"
+        colSpan="col-span-2"
       />
       <Title value="Work Experience" />
       <Bubble
@@ -98,7 +102,7 @@ export default function Overview() {
             but I've also worked on projects with Windows .NET applications.
           </div>
         }
-        columns="6"
+        colSpan="col-span-6"
       />
       <Title value="Education" />
       <Bubble
@@ -106,7 +110,7 @@ export default function Overview() {
         content="Pursuing a Bachelor of Science degree through the College of
           Innovation and Design at Boise State University. Planning to graduate
           in the December of 2021."
-        columns="3"
+        colSpan="col-span-3"
       />
       <Bubble
         title="Details"
@@ -119,7 +123,7 @@ export default function Overview() {
             <b>Cumulative GPA: </b> 3.343
           </div>
         }
-        columns="3"
+        colSpan="col-span-3"
       />
     </div>
   );
