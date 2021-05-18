@@ -21,12 +21,12 @@ export default function Overview() {
       </div>
       <div className={`md:col-span-4 ${bubble}`}>
         <div>
-          My name is Ethan Mathes, and this is my website! Here you can check
-          out a bunch of the cool stuff I've done in college. The projects and
-          pieces displayed here are a showcase of my talents, skills, and
-          knowledge acquired through my studies. I'm majoring in Games,
-          Interactive Media, and Mobile with a minor in Information Technology
-          Management. I am also currently working as a software developer at
+          I'm Ethan Mathes, and this is my website! Here you can check out a
+          bunch of the cool stuff I've done in college. The projects and pieces
+          displayed here are a showcase of my talents, skills, and knowledge
+          acquired through my studies. I'm majoring in Games, Interactive Media,
+          and Mobile with a minor in Information Technology Management. I am
+          also currently working as a software developer at
           <a href="https://bfitec.com" className={link}>
             {" "}
             BF Innovative Technologies
@@ -105,7 +105,7 @@ export default function Overview() {
         title="General Info"
         content="Pursuing a Bachelor of Science degree through the College of
           Innovation and Design at Boise State University. Planning to graduate
-          in May of 2021."
+          in the December of 2021."
         columns="3"
       />
       <Bubble
