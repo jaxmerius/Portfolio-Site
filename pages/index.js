@@ -112,7 +112,7 @@ export default function Overview() {
             title="General Info"
             content="Pursuing a Bachelor of Science degree through the College of
           Innovation and Design at Boise State University. Planning to graduate
-          in the December of 2021."
+          in December of 2021."
             colSpan="col-span-3"
           />
           <Bubble
