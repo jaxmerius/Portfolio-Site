@@ -1,13 +1,15 @@
 import Link from "next/link";
+import classNames from "../utils/classNames";
 
 export default function Nav({ currentPage }) {
   const NavButton = ({ value, loc }) => {
     return (
       <Link href={loc}>
         <button
-          className={`text-green-400 hover:bg-gray-600 px-3 py-2 rounded-md text-sm focus:outline-none ${
+          className={classNames(
+            "text-green-400 hover:bg-gray-600 px-3 py-2 rounded-md text-sm focus:outline-none ",
             currentPage == value ? "border border-green-800" : null
-          }`}
+          )}
           value={value}
         >
           {value}

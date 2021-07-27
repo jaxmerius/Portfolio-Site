@@ -1,7 +1,9 @@
 import Nav from "../components/nav";
 import { useState } from "react";
-import { bubble, grid } from "../styles/styles";
+import { bubble, grid, link } from "../styles/styles";
+import Link from "next/link";
 import ArtData from "../public/data/art.json";
+import classNames from "../utils/classNames";
 
 export default function Art() {
   const [showModal, setShowModal] = useState(false);
@@ -11,7 +13,7 @@ export default function Art() {
     <div className="min-h-screen h-full bg-gray-900 text-gray-300">
       <Nav currentPage="Art" />
       <div className="h-full flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-24 pb-5 sm:pb-10">
-        <div className={`lg:grid-cols-3 md:grid-cols-2 ${grid}`}>
+        <div className={"lg:grid-cols-3 md:grid-cols-2 " + grid}>
           {showModal ? (
             <>
               <div
@@ -38,7 +40,9 @@ export default function Art() {
           </div>
           {ArtData.map((img) => {
             return (
-              <div className={`relative z-0 flex flex-col ${bubble}`}>
+              <div
+                className={classNames("relative z-0 flex flex-col ", bubble)}
+              >
                 <div className="text-green-400 text-3xl font-bold flex-grow">
                   {img.title}
                 </div>
@@ -66,6 +70,40 @@ export default function Art() {
               </div>
             );
           })}
+          <div className={bubble}>
+            <div className="text-green-400 text-3xl font-bold flex-grow">
+              Boise Philharmonic
+            </div>
+            <div className="my-4 flex-grow">
+              <img
+                src={"/art/boise_phil.png"}
+                alt={"Boise Philharmonic"}
+                className="mx-auto cursor-pointer"
+                onClick={() => {
+                  setModalImg("Boise Philharmonic");
+                  setShowModal(true);
+                }}
+              />
+            </div>
+            <div className="flex-grow px-2">
+              A project in conjunction with the Boise Phil Youth Orchestra, in
+              which I worked with a team of developers and another artist to
+              design the art for an audio visualizer.
+            </div>
+            <hr className="my-4 border border-green-800" />
+            <div className="grid grid-cols-2">
+              <Link href="https://www.kivitv.com/rebound/unique-collab-brings-one-of-a-kind-performance-to-the-valley">
+                <a target="_blank" className={link}>
+                  KIVI News
+                </a>
+              </Link>
+              <Link href="https://www.boisephil.tv/videos/see-the-music">
+                <a target="_blank" className={link}>
+                  Performance
+                </a>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

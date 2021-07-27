@@ -2,13 +2,14 @@ import Nav from "../components/nav";
 import Link from "next/link";
 import { bubble, grid, link } from "../styles/styles";
 import videos from "../public/data/videos.json";
+import classNames from "../utils/classNames";
 
 export default function Development() {
   return (
     <div className="min-h-screen h-full bg-gray-900 text-gray-300">
       <Nav currentPage="Development" />
       <div className="h-full flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-24 pb-5 sm:pb-10">
-        <div className={`lg:grid-cols-2 ${grid}`}>
+        <div className={classNames("lg:grid-cols-2 ", grid)}>
           <div className="lg:col-span-2 text-4xl font-bold">
             Development Projects
           </div>
@@ -47,15 +48,21 @@ export default function Development() {
                 {video.site ? (
                   <div className="grid grid-cols-2">
                     <Link href={video.repo}>
-                      <a className={link}>Github</a>
+                      <a target="_blank" className={link}>
+                        Github
+                      </a>
                     </Link>
                     <Link href={video.site}>
-                      <a className={link}>Site</a>
+                      <a target="_blank" className={link}>
+                        Site
+                      </a>
                     </Link>
                   </div>
                 ) : (
                   <Link href={video.repo}>
-                    <a className={link}>Github</a>
+                    <a target="_blank" className={link}>
+                      Github
+                    </a>
                   </Link>
                 )}
               </div>

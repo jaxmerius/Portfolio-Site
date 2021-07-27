@@ -1,11 +1,12 @@
 import Nav from "../components/nav";
 import { bubble, grid, link } from "../styles/styles";
 import Link from "next/link";
+import classNames from "../utils/classNames";
 
 export default function Overview() {
   const Bubble = ({ title, content, colSpan }) => {
     return (
-      <div className={`md:${colSpan} ${bubble}`}>
+      <div className={classNames(colSpan, bubble)}>
         <div className="font-bold text-green-400">{title}</div>
         <div className="mt-2">{content}</div>
       </div>
@@ -20,7 +21,7 @@ export default function Overview() {
     <div className="min-h-screen h-full bg-gray-900 text-gray-300">
       <Nav currentPage="Overview" />
       <div className="h-full flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-24 pb-5 sm:pb-10">
-        <div className={`md:grid-cols-6 ${grid}`}>
+        <div className={classNames("md:grid-cols-6 ", grid)}>
           <div className="text-green-400 md:col-span-2 text-5xl sm:text-6xl md:text-7xl font-bold flex m-auto">
             About Me
           </div>
@@ -34,16 +35,19 @@ export default function Overview() {
                 knowledge acquired through my studies. I'm majoring in Games,
                 Interactive Media, and Mobile with a minor in Information
                 Technology Management. I am also currently working as a software
-                developer at
+                engineer at
                 <Link href="https://bfitec.com">
-                  <a className={link}> BF Innovative Technologies</a>
+                  <a target="_blank" className={link}>
+                    {" "}
+                    BF Innovative Technologies
+                  </a>
                 </Link>
                 ! So look around, enjoy, and feel free to contact me.
               </div>
             }
-            colSpan="col-span-4"
+            colSpan="md:col-span-4"
           />
-          <div className={`md:col-span-6 ${bubble}`}>
+          <div className={classNames("md:col-span-6 ", bubble)}>
             <div
               style={{
                 position: "relative",
@@ -70,42 +74,51 @@ export default function Overview() {
           <Bubble
             title="Languages/ Frameworks"
             content="NodeJS, JSON, NextJS, ReactJS, React Native, TypeScript, C#, Docker"
-            colSpan="col-span-2"
+            colSpan="md:col-span-2"
           />
           <Bubble
             title="Art Software"
             content="Photoshop, Illustrator, Animate, Premier Pro, Maya, Substance Painter"
-            colSpan="col-span-2"
+            colSpan="md:col-span-2"
           />
           <Bubble
             title="Other Relevant Software"
             content="Unity, GitHub, GitLab, Visual Studio, AWS, Vercel, Firebase"
-            colSpan="col-span-2"
+            colSpan="md:col-span-2"
           />
           <Title value="Work Experience" />
           <Bubble
-            title="Software Developer (BFITEC, APR 2020-CURRENT)"
+            title="Software Engineer (BFITEC, APR 2020-CURRENT)"
             content={
               <div>
-                Currently working as a software developer at
+                Currently working as a software engineer at
                 <Link href="https://bfitec.com">
-                  <a className={link}> BF Innovative Technologies </a>
+                  <a target="_blank" className={link}>
+                    {" "}
+                    BF Innovative Technologies{" "}
+                  </a>
                 </Link>
                 since April of 2020. During my time at this company I've worked
                 on a number of projects, including the
                 <Link href="https://www.fivepencilmethod.com/">
-                  <a className={link}> Five Pencil Method </a>
+                  <a target="_blank" className={link}>
+                    {" "}
+                    Five Pencil Method{" "}
+                  </a>
                 </Link>
                 website, it's companion app, and the
                 <Link href="https://pcpureposition.com">
-                  <a className={link}> Pure Position </a>
+                  <a target="_blank" className={link}>
+                    {" "}
+                    Pure Position{" "}
+                  </a>
                 </Link>
                 website. I've primarily worked with NodeJS, NextJS, and
                 Typescript but I've also worked on projects with Windows .NET
                 applications.
               </div>
             }
-            colSpan="col-span-6"
+            colSpan="md:col-span-6"
           />
           <Title value="Education" />
           <Bubble
@@ -113,7 +126,7 @@ export default function Overview() {
             content="Pursuing a Bachelor of Science degree through the College of
           Innovation and Design at Boise State University. Planning to graduate
           in December of 2021."
-            colSpan="col-span-3"
+            colSpan="md:col-span-3"
           />
           <Bubble
             title="Details"
@@ -123,10 +136,10 @@ export default function Overview() {
                 <br />
                 <b>Minor: </b> Information Technology Management
                 <br />
-                <b>Cumulative GPA: </b> 3.343
+                <b>Cumulative GPA: </b> 3.282
               </div>
             }
-            colSpan="col-span-3"
+            colSpan="md:col-span-3"
           />
         </div>
       </div>
