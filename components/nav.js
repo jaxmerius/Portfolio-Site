@@ -1,5 +1,8 @@
 import Link from "next/link";
-import classNames from "../utils/classNames";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
 
 export default function Nav({ currentPage }) {
   const NavButton = ({ value, loc }) => {
@@ -7,26 +10,26 @@ export default function Nav({ currentPage }) {
       <Link href={loc}>
         <button
           className={classNames(
-            "text-green-400 hover:bg-gray-600 px-3 py-2 rounded-md text-sm focus:outline-none ",
-            currentPage == value ? "border border-green-800" : null
+            currentPage == value ? "ring-1 ring-secondary-800" : "",
+            "bg-primary-700 hover:bg-primary-600 px-3 py-2 rounded-md text-sm focus:outline-none"
           )}
           value={value}
         >
-          {value}
+          <div className="text-secondary-400">{value}</div>
         </button>
       </Link>
     );
   };
 
   return (
-    <nav className="fixed bg-gray-700 w-full border-b border-green-400 z-10">
+    <nav className="fixed bg-primary-700 w-full border-b border-green-800 z-10">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
               <img className="block h-8 w-auto" src="/logo.png" alt="Logo" />
             </div>
-            <div className="flex-shrink-0 flex items-center text-gray-300 px-3 py-2 rounded-md text-2xl">
+            <div className="flex-shrink-0 flex items-center text-primary-300 px-3 py-2 rounded-md text-2xl">
               ETHAN MATHES
             </div>
           </div>

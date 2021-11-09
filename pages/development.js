@@ -1,22 +1,20 @@
 import Nav from "../components/nav";
 import Link from "next/link";
-import { bubble, grid, link } from "../styles/styles";
 import videos from "../public/data/videos.json";
-import classNames from "../utils/classNames";
 
 export default function Development() {
   return (
-    <div className="min-h-screen h-full bg-gray-900 text-gray-300">
+    <div className="min-h-screen h-full bg-primary-900 text-primary-300">
       <Nav currentPage="Development" />
       <div className="h-full flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-24 pb-5 sm:pb-10">
-        <div className={classNames("lg:grid-cols-2 ", grid)}>
+        <div className="lg:grid-cols-2 custGrid">
           <div className="lg:col-span-2 text-4xl font-bold">
             Development Projects
           </div>
-          {videos.map((video) => {
+          {videos.map((video, idx) => {
             return (
-              <div className={bubble}>
-                <div className="text-green-400 text-3xl font-bold">
+              <div key={idx} className="bubble">
+                <div className="text-secondary-400 text-3xl font-bold">
                   {video.title}
                 </div>
                 <div>
@@ -44,23 +42,23 @@ export default function Development() {
                   </div>
                 </div>
                 <div className="flex-grow px-2">{video.description}</div>
-                <hr className="my-4 border border-green-800" />
+                <hr className="my-4 border border-secondary-800" />
                 {video.site ? (
                   <div className="grid grid-cols-2">
                     <Link href={video.repo}>
-                      <a target="_blank" className={link}>
+                      <a target="_blank" className="link">
                         Github
                       </a>
                     </Link>
                     <Link href={video.site}>
-                      <a target="_blank" className={link}>
+                      <a target="_blank" className="link">
                         Site
                       </a>
                     </Link>
                   </div>
                 ) : (
                   <Link href={video.repo}>
-                    <a target="_blank" className={link}>
+                    <a target="_blank" className="link">
                       Github
                     </a>
                   </Link>

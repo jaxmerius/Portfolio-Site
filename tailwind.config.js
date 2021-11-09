@@ -10,8 +10,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gray: colors.trueGray,
-        green: colors.green,
+        primary: colors.trueGray,
+        secondary: colors.green,
+        tertiary: colors.purple,
+        accent: colors.teal,
       },
     },
   },

@@ -1,13 +1,11 @@
 import Nav from "../components/nav";
-import { bubble, grid, link } from "../styles/styles";
 import Link from "next/link";
-import classNames from "../utils/classNames";
 
 export default function Overview() {
   const Bubble = ({ title, content, colSpan }) => {
     return (
-      <div className={classNames(colSpan, bubble)}>
-        <div className="font-bold text-green-400">{title}</div>
+      <div className={colSpan + " bubble"}>
+        <div className="font-bold text-secondary-400">{title}</div>
         <div className="mt-2">{content}</div>
       </div>
     );
@@ -18,36 +16,37 @@ export default function Overview() {
   };
 
   return (
-    <div className="min-h-screen h-full bg-gray-900 text-gray-300">
+    <div className="min-h-screen h-full bg-primary-900 text-primary-300">
       <Nav currentPage="Overview" />
       <div className="h-full flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-24 pb-5 sm:pb-10">
-        <div className={classNames("md:grid-cols-6 ", grid)}>
-          <div className="text-green-400 md:col-span-2 text-5xl sm:text-6xl md:text-7xl font-bold flex m-auto">
+        <div className="md:grid-cols-6 custGrid">
+          <div className="text-secondary-400 md:col-span-2 text-5xl sm:text-6xl md:text-7xl font-bold flex m-auto">
             About Me
           </div>
           <Bubble
             title=""
             content={
               <div>
-                I'm Ethan Mathes, and this is my website! Here you can check out
-                a bunch of the cool stuff I've done in college. The projects and
+                My name is Ethan Mathes, and this is my website! I built it from
+                scratch so you can check out a bunch of the cool stuff I've done
+                in college, as well as my work experience. The projects and
                 pieces displayed here are a showcase of my talents, skills, and
-                knowledge acquired through my studies. I'm majoring in Games,
+                knowledge acquired through my studies. My major is in Games,
                 Interactive Media, and Mobile with a minor in Information
                 Technology Management. I am also currently working as a software
                 engineer at
-                <Link href="https://bfitec.com">
-                  <a target="_blank" className={link}>
+                <Link href="https://www.stackfoundry.io/">
+                  <a target="_blank" className="link">
                     {" "}
-                    BF Innovative Technologies
+                    STACK FOUNDRY
                   </a>
                 </Link>
-                ! So look around, enjoy, and feel free to contact me.
+                . Look around, enjoy, and feel free to contact me!
               </div>
             }
             colSpan="md:col-span-4"
           />
-          <div className={classNames("md:col-span-6 ", bubble)}>
+          <div className="bubble md:col-span-6">
             <div
               style={{
                 position: "relative",
@@ -72,50 +71,49 @@ export default function Overview() {
           </div>
           <Title value="Technical Skills" />
           <Bubble
-            title="Languages/ Frameworks"
-            content="NodeJS, JSON, NextJS, ReactJS, React Native, TypeScript, C#, Docker"
+            title="Languages/Frameworks"
+            content="Node.js, JSON, Next.js, React, React Native, TypeScript, C#"
             colSpan="md:col-span-2"
           />
           <Bubble
             title="Art Software"
-            content="Photoshop, Illustrator, Animate, Premier Pro, Maya, Substance Painter"
+            content="Photoshop, Premier Pro, Maya, Substance Painter"
             colSpan="md:col-span-2"
           />
           <Bubble
             title="Other Relevant Software"
-            content="Unity, GitHub, GitLab, Visual Studio, AWS, Vercel, Firebase"
+            content="Unity, Git, Visual Studio, Vercel, Firebase"
             colSpan="md:col-span-2"
           />
           <Title value="Work Experience" />
           <Bubble
-            title="Software Engineer (BFITEC, APR 2020-CURRENT)"
+            title="Software Engineer (STACK FOUNDRY, APR 2020-CURRENT)"
             content={
               <div>
                 Currently working as a software engineer at
-                <Link href="https://bfitec.com">
-                  <a target="_blank" className={link}>
+                <Link href="https://www.stackfoundry.io/">
+                  <a target="_blank" className="link">
                     {" "}
-                    BF Innovative Technologies{" "}
+                    STACK FOUNDRY{" "}
                   </a>
                 </Link>
                 since April of 2020. During my time at this company I've worked
                 on a number of projects, including the
                 <Link href="https://www.fivepencilmethod.com/">
-                  <a target="_blank" className={link}>
+                  <a target="_blank" className="link">
                     {" "}
                     Five Pencil Method{" "}
                   </a>
                 </Link>
                 website, it's companion app, and the
                 <Link href="https://pcpureposition.com">
-                  <a target="_blank" className={link}>
+                  <a target="_blank" className="link">
                     {" "}
                     Pure Position{" "}
                   </a>
                 </Link>
-                website. I've primarily worked with NodeJS, NextJS, and
-                Typescript but I've also worked on projects with Windows .NET
-                applications.
+                website. I've primarily worked with NextJS and Typescript, but
+                I've also worked on Windows .NET applications.
               </div>
             }
             colSpan="md:col-span-6"
