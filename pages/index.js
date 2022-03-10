@@ -31,10 +31,10 @@ export default function Overview() {
                 scratch so you can check out a bunch of the cool stuff I've done
                 in college, as well as my work experience. The projects and
                 pieces displayed here are a showcase of my talents, skills, and
-                knowledge acquired through my studies. My major is in Games,
-                Interactive Media, and Mobile with a minor in Information
-                Technology Management. I am also currently working as a software
-                engineer at
+                knowledge acquired through my studies. I have a Bachelor's in
+                Games, Interactive Media, and Mobile with a minor in Information
+                Technology Management. I am also currently working as a Software
+                Engineer at
                 <Link href="https://www.stackfoundry.io/">
                   <a target="_blank" className="link">
                     {" "}
@@ -72,22 +72,22 @@ export default function Overview() {
           <Title value="Technical Skills" />
           <Bubble
             title="Languages/Frameworks"
-            content="Node.js, JSON, Next.js, React, React Native, TypeScript, C#"
+            content="Next.js, React, React Native, TypeScript, C#, C++"
             colSpan="md:col-span-2"
           />
           <Bubble
             title="Art Software"
-            content="Photoshop, Premier Pro, Maya, Substance Painter"
+            content="Photoshop, Premier Pro, Maya, Roadkill, Substance Painter"
             colSpan="md:col-span-2"
           />
           <Bubble
             title="Other Relevant Software"
-            content="Unity, Git, Visual Studio, Vercel, Firebase"
+            content="Unity, Unreal Engine, GitHub"
             colSpan="md:col-span-2"
           />
           <Title value="Work Experience" />
           <Bubble
-            title="Software Engineer (STACK FOUNDRY, APR 2020-CURRENT)"
+            title="Software Engineer (STACK FOUNDRY, MAY 2020-CURRENT)"
             content={
               <div>
                 Currently working as a software engineer at
@@ -97,8 +97,8 @@ export default function Overview() {
                     STACK FOUNDRY{" "}
                   </a>
                 </Link>
-                since April of 2020. During my time at this company I've worked
-                on a number of projects, including the
+                since May of 2020. During my time at this company I've worked on
+                a number of projects, including the
                 <Link href="https://www.fivepencilmethod.com/">
                   <a target="_blank" className="link">
                     {" "}
@@ -113,17 +113,17 @@ export default function Overview() {
                   </a>
                 </Link>
                 website. I've primarily worked with NextJS and Typescript, but
-                I've also worked on Windows .NET applications.
+                I've also worked on Windows .NET applications and used React
+                Native to build the aforementioned app.
               </div>
             }
             colSpan="md:col-span-6"
           />
           <Title value="Education" />
           <Bubble
-            title="General Info"
-            content="Pursuing a Bachelor of Science degree through the College of
-          Innovation and Design at Boise State University. Planning to graduate
-          in December of 2021."
+            title="Degree"
+            content="Bachelor's of Science degree through the College of
+          Innovation and Design at Boise State University."
             colSpan="md:col-span-3"
           />
           <Bubble
@@ -133,8 +133,6 @@ export default function Overview() {
                 <b>Major: </b> Games, Interactive Media, and Mobile
                 <br />
                 <b>Minor: </b> Information Technology Management
-                <br />
-                <b>Cumulative GPA: </b> 3.282
               </div>
             }
             colSpan="md:col-span-3"
