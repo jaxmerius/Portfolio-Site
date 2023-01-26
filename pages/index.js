@@ -33,15 +33,15 @@ export default function Overview() {
                 pieces displayed here are a showcase of my talents, skills, and
                 knowledge acquired through my studies. I have a Bachelor's in
                 Games, Interactive Media, and Mobile with a minor in Information
-                Technology Management. I am also currently working as a Software
-                Engineer at
-                <Link href="https://www.stackfoundry.io/">
+                Technology Management. I am currently working as a Games Tester
+                at
+                <Link href="https://games.lionbridge.com">
                   <a target="_blank" className="link">
                     {" "}
-                    STACK FOUNDRY
+                    Lionbridge Games
                   </a>
                 </Link>
-                . Look around, enjoy, and feel free to contact me!
+                . Have a look around, enjoy, and feel free to contact me!
               </div>
             }
             colSpan="md:col-span-4"
@@ -87,18 +87,40 @@ export default function Overview() {
           />
           <Title value="Work Experience" />
           <Bubble
-            title="Software Engineer (STACK FOUNDRY, MAY 2020-CURRENT)"
+            title="GAMES TESTER (LIONBRIDGE GAMES, JULY 2022 - PRESENT)"
             content={
               <div>
-                Currently working as a software engineer at
+                Currently working as a games tester at
+                <Link href="https://games.lionbridge.com">
+                  <a target="_blank" className="link">
+                    {" "}
+                    Lionbridge Games{" "}
+                  </a>
+                </Link>
+                since July of 2022. The responsibilities of this job include
+                performing directed and ad-hoc functionality testing on
+                third-party video game software with the intent to find and
+                report bugs and other issues. Game testing is done on current
+                and previous gen consoles as well as PC, and reporting of bugs
+                is done in JIRA. Due to NDA I am unable to disclose information
+                regarding specific projects.
+              </div>
+            }
+            colSpan="md:col-span-6"
+          />
+          <Bubble
+            title="SOFTWARE ENGINEER (STACK FOUNDRY, MAY 2020-MAY 2022)"
+            content={
+              <div>
+                Worked as a software engineer at
                 <Link href="https://www.stackfoundry.io/">
                   <a target="_blank" className="link">
                     {" "}
                     STACK FOUNDRY{" "}
                   </a>
                 </Link>
-                since May of 2020. During my time at this company I've worked on
-                a number of projects, including the
+                from May of 2020 to May of 2022. During my time at this company
+                I worked on a number of projects, including the
                 <Link href="https://www.fivepencilmethod.com/">
                   <a target="_blank" className="link">
                     {" "}
@@ -112,9 +134,9 @@ export default function Overview() {
                     Pure Position{" "}
                   </a>
                 </Link>
-                website. I've primarily worked with NextJS and Typescript, but
-                I've also worked on Windows .NET applications and used React
-                Native to build the aforementioned app.
+                website. I primarily worked with NextJS and Typescript, but I
+                also worked on Windows .NET applications and used React Native
+                to build the aforementioned app.
               </div>
             }
             colSpan="md:col-span-6"
