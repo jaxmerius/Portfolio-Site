@@ -21,7 +21,7 @@ export default function Art() {
                 <div className="relative w-auto max-w-sm sm:max-w-l md:max-w-xl lg:max-w-3xl">
                   <div className="bubble">
                     <button
-                      className="absolute right-5 sm:right-7 md:right-8 top-3 sm:top-5 focus:outline-none text-red-700 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold hover:text-red-500"
+                      className="absolute right-0.5 sm:right-0.5 md:right-0 -top-1.5 sm:-top-2 md:-top-2.5 lg:-top-3 focus:outline-none text-red-700 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold hover:text-red-500"
                       onClick={() => setShowModal(false)}
                     >
                       &times;
@@ -54,6 +54,22 @@ export default function Art() {
                   />
                 </div>
                 <div className="px-2">{img.description}</div>
+                {img.links ? (
+                  <>
+                    <hr className="my-4 border border-secondary-800" />
+                    <div className={"grid grid-cols-" + img.links.length}>
+                      {img.links.map((item) => {
+                        return (
+                          <Link href={item.link}>
+                            <a target="_blank" className="link">
+                              {item.name}
+                            </a>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </>
+                ) : null}
                 <img
                   src="/magnify.png"
                   alt="magnify"
@@ -66,40 +82,6 @@ export default function Art() {
               </div>
             );
           })}
-          <div className="bubble">
-            <div className="text-secondary-400 text-3xl font-bold flex-grow">
-              Boise Philharmonic
-            </div>
-            <div className="my-4 flex-grow">
-              <img
-                src={"/art/boise_phil.png"}
-                alt={"Boise Philharmonic"}
-                className="mx-auto cursor-pointer"
-                onClick={() => {
-                  setModalImg("Boise Philharmonic");
-                  setShowModal(true);
-                }}
-              />
-            </div>
-            <div className="flex-grow px-2">
-              A project in conjunction with the Boise Phil Youth Orchestra, in
-              which I worked with a team of developers and another artist to
-              design the art for an audio visualizer.
-            </div>
-            <hr className="my-4 border border-secondary-800" />
-            <div className="grid grid-cols-2">
-              <Link href="https://www.kivitv.com/rebound/unique-collab-brings-one-of-a-kind-performance-to-the-valley">
-                <a target="_blank" className="link">
-                  KIVI News
-                </a>
-              </Link>
-              <Link href="https://www.boisephil.tv/videos/see-the-music">
-                <a target="_blank" className="link">
-                  Performance
-                </a>
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </div>

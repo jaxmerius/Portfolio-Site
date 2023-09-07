@@ -33,12 +33,12 @@ export default function Overview() {
                 pieces displayed here are a showcase of my talents, skills, and
                 knowledge acquired through my studies. I have a Bachelor's in
                 Games, Interactive Media, and Mobile with a minor in Information
-                Technology Management. I am currently working as a Games Tester
-                at
-                <Link href="https://games.lionbridge.com">
+                Technology Management. I am currently working as a Software QA
+                Tester at
+                <Link href="https://www.lionbridge.com">
                   <a target="_blank" className="link">
                     {" "}
-                    Lionbridge Games
+                    Lionbridge
                   </a>
                 </Link>
                 . Have a look around, enjoy, and feel free to contact me!
@@ -82,7 +82,7 @@ export default function Overview() {
           />
           <Bubble
             title="Other Relevant Software"
-            content="Unity, Unreal Engine, GitHub"
+            content="Unity, Unreal Engine, GitHub, Jira"
             colSpan="md:col-span-2"
           />
           <Title value="Work Experience" />
@@ -90,20 +90,21 @@ export default function Overview() {
             title="GAMES TESTER (LIONBRIDGE GAMES, JULY 2022 - PRESENT)"
             content={
               <div>
-                Currently working as a games tester at
-                <Link href="https://games.lionbridge.com">
+                Currently working as a Software QA Tester at
+                <Link href="https://www.lionbridge.com">
                   <a target="_blank" className="link">
                     {" "}
-                    Lionbridge Games{" "}
+                    Lionbridge{" "}
                   </a>
                 </Link>
                 since July of 2022. The responsibilities of this job include
                 performing directed and ad-hoc functionality testing on
-                third-party video game software with the intent to find and
-                report bugs and other issues. Game testing is done on current
-                and previous gen consoles as well as PC, and reporting of bugs
-                is done in JIRA. Due to NDA I am unable to disclose information
-                regarding specific projects.
+                third-party software with the intent to find and report bugs and
+                other issues. Testing is done on current and previous gen game
+                consoles as well as PC and mobile devices, and reporting of bugs
+                is done in JIRA. Most notably worked on Modern Warfare II
+                (2022). Due to NDA I am unable to disclose information regarding
+                other projects.
               </div>
             }
             colSpan="md:col-span-6"
@@ -127,16 +128,15 @@ export default function Overview() {
                     Five Pencil Method{" "}
                   </a>
                 </Link>
-                website, it's companion app, and the
-                <Link href="https://pcpureposition.com">
+                website and it's companion app (iOS/
+                <Link href="https://play.google.com/store/apps/details?id=com.makerstreamer.fivepencilmethod">
                   <a target="_blank" className="link">
-                    {" "}
-                    Pure Position{" "}
+                    Android
                   </a>
                 </Link>
-                website. I primarily worked with NextJS and Typescript, but I
-                also worked on Windows .NET applications and used React Native
-                to build the aforementioned app.
+                ). Primarily worked with NextJS and Typescript, but also worked
+                on Windows .NET applications and used React Native with Expo to
+                build the aforementioned app.
               </div>
             }
             colSpan="md:col-span-6"
