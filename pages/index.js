@@ -91,11 +91,12 @@ export default function Overview() {
             content={
               <div>
                 Currently working as a Software QA Tester at
-                <Link href="https://www.lionbridge.com">
-                  <a target="_blank" className="link">
-                    {" "}
-                    Lionbridge{" "}
-                  </a>
+                <Link
+                  href="https://www.lionbridge.com"
+                  target="_blank"
+                  className="link"
+                >
+                  Lionbridge
                 </Link>
                 since July of 2022. The responsibilities of this job include
                 performing directed and ad-hoc functionality testing on
@@ -114,25 +115,30 @@ export default function Overview() {
             content={
               <div>
                 Worked as a software engineer at
-                <Link href="https://www.stackfoundry.io/">
-                  <a target="_blank" className="link">
-                    {" "}
-                    STACK FOUNDRY{" "}
-                  </a>
+                <Link
+                  href="https://www.stackfoundry.io/"
+                  target="_blank"
+                  className="link"
+                >
+                  STACK FOUNDRY
                 </Link>
                 from May of 2020 to May of 2022. During my time at this company
                 I worked on a number of projects, including the
-                <Link href="https://www.fivepencilmethod.com/">
-                  <a target="_blank" className="link">
-                    {" "}
-                    Five Pencil Method{" "}
-                  </a>
+                <Link
+                  href="https://www.fivepencilmethod.com/"
+                  target="_blank"
+                  className="link"
+                >
+                  {" "}
+                  Five Pencil Method{" "}
                 </Link>
                 website and it's companion app (iOS/
-                <Link href="https://play.google.com/store/apps/details?id=com.makerstreamer.fivepencilmethod">
-                  <a target="_blank" className="link">
-                    Android
-                  </a>
+                <Link
+                  href="https://play.google.com/store/apps/details?id=com.makerstreamer.fivepencilmethod"
+                  target="_blank"
+                  className="link"
+                >
+                  Android
                 </Link>
                 ). Primarily worked with NextJS and Typescript, but also worked
                 on Windows .NET applications and used React Native with Expo to

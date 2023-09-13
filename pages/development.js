@@ -45,22 +45,16 @@ export default function Development() {
                 <hr className="my-4 border border-secondary-800" />
                 {video.site ? (
                   <div className="grid grid-cols-2">
-                    <Link href={video.repo}>
-                      <a target="_blank" className="link">
-                        Github
-                      </a>
+                    <Link href={video.repo} target="_blank" className="link">
+                      Github
                     </Link>
-                    <Link href={video.site}>
-                      <a target="_blank" className="link">
-                        Site
-                      </a>
+                    <Link href={video.site} target="_blank" className="link">
+                      Site
                     </Link>
                   </div>
                 ) : (
-                  <Link href={video.repo}>
-                    <a target="_blank" className="link">
-                      Github
-                    </a>
+                  <Link href={video.repo} target="_blank" className="link">
+                    Github
                   </Link>
                 )}
               </div>

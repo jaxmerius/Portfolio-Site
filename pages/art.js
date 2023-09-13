@@ -60,10 +60,13 @@ export default function Art() {
                     <div className={"grid grid-cols-" + img.links.length}>
                       {img.links.map((item) => {
                         return (
-                          <Link href={item.link}>
-                            <a target="_blank" className="link">
-                              {item.name}
-                            </a>
+                          <Link
+                            key={item.id}
+                            href={item.link}
+                            target="_blank"
+                            className="link"
+                          >
+                            {item.name}
                           </Link>
                         );
                       })}
