@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Egyptian Conniption",
+    "link": "https://youtube.com/embed/eHKAIl75dvk",
+    "description": "The final game I developed with classmates in GIMM 400, this was the first time we used Unreal Engine.",
+    "repo": "https://github.com/jaxmerius/Egyptian-Conniption"
+  },
+  {
+    "title": "Spooky Hoops",
+    "link": "https://youtube.com/embed/eCW8auEoaaY",
+    "description": "Another game I developed with classmates in GIMM 400. For this one we used a Python-based machine learning script to control the AI opponent.",
+    "repo": "https://github.com/jaxmerius/Spooky-Hoops"
+  },
+  {
+    "title": "Defense of the Core",
+    "link": "https://youtube.com/embed/H8lzY8Y0SPw",
+    "description": "A game I developed with classmates in my GIMM 400 class. We built it in Unity, using state machines for the enemies.",
+    "repo": "https://github.com/jaxmerius/Defense-of-the-Core"
+  },
+  {
+    "title": "Personal Space AR App",
+    "link": "https://youtube.com/embed/VaHHNnSRvZw",
+    "description": "An app I developed with classmates in my GIMM 310 class using Unity's AR Kit. The goal of this project was to help children with autism and other learning disabilities understand personal space.",
+    "repo": "https://github.com/jaxmerius/Personal-Space-AR"
+  },
+  {
+    "title": "Field of War",
+    "link": "https://youtube.com/embed/sXQAof3vDtM",
+    "description": "A game I developed with classmates in my GIMM 250 class, built in Adobe Animate. This was the first group development project I worked on in the GIMM program.",
+    "repo": "https://github.com/jaxmerius/Field-Of-War"
+  },
+  {
+    "title": "Driving Simulator (St. Lukes)",
+    "link": "https://youtube.com/embed/FUyO5W_DYKU",
+    "description": "The final project for my Engineering 130 class freshman year. We built a driving simulator in Unity to help rehabilitate patients who had suffered neurological trauma.",
+    "repo": "https://github.com/jaxmerius/Driving-Simulator",
+    "site": "https://sites.google.com/u.boisestate.edu/thereactionsimulator"
+  },
+  {
+    "title": "Goblin Defense",
+    "link": "https://youtube.com/embed/Re_zsRh819Q",
+    "description": "The first game I developed upon entering the GIMM program at Boise State. I built it in Adobe Animate in my GIMM 110 class freshman year.",
+    "repo": "https://github.com/jaxmerius/Goblin-Defense"
+  }
+]
