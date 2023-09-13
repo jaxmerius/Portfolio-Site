@@ -15,12 +15,14 @@ export default function Links() {
             return (
               <div key={idx} className="bubble">
                 <Link href={item.href} target="_blank">
-                  <img
-                    className="w-2/3 mx-auto"
-                    src={"/" + item.img + ".png"}
-                    alt={item.img}
-                  />
-                  <div className="mt-4 break-all link">{item.value}</div>
+                  <>
+                    <img
+                      className="w-2/3 mx-auto"
+                      src={"/" + item.img + ".png"}
+                      alt={item.img}
+                    />
+                    <div className="mt-4 break-all link">{item.value}</div>
+                  </>
                 </Link>
               </div>
             );

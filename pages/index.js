@@ -35,11 +35,12 @@ export default function Overview() {
                 Games, Interactive Media, and Mobile with a minor in Information
                 Technology Management. I am currently working as a Software QA
                 Tester at
-                <Link href="https://www.lionbridge.com">
-                  <a target="_blank" className="link">
-                    {" "}
-                    Lionbridge
-                  </a>
+                <Link
+                  href="https://www.lionbridge.com"
+                  target="_blank"
+                  className="link"
+                >
+                  <> Lionbridge</>
                 </Link>
                 . Have a look around, enjoy, and feel free to contact me!
               </div>
@@ -96,7 +97,7 @@ export default function Overview() {
                   target="_blank"
                   className="link"
                 >
-                  Lionbridge
+                  <> Lionbridge </>
                 </Link>
                 since July of 2022. The responsibilities of this job include
                 performing directed and ad-hoc functionality testing on
@@ -120,7 +121,7 @@ export default function Overview() {
                   target="_blank"
                   className="link"
                 >
-                  STACK FOUNDRY
+                  <> STACK FOUNDRY </>
                 </Link>
                 from May of 2020 to May of 2022. During my time at this company
                 I worked on a number of projects, including the
@@ -129,8 +130,7 @@ export default function Overview() {
                   target="_blank"
                   className="link"
                 >
-                  {" "}
-                  Five Pencil Method{" "}
+                  <> Five Pencil Method </>
                 </Link>
                 website and it's companion app (iOS/
                 <Link
@@ -150,8 +150,7 @@ export default function Overview() {
           <Title value="Education" />
           <Bubble
             title="Degree"
-            content="Bachelor's of Science degree through the College of
-          Innovation and Design at Boise State University."
+            content="Bachelor's of Science degree through the College of Innovation and Design at Boise State University."
             colSpan="md:col-span-3"
           />
           <Bubble
