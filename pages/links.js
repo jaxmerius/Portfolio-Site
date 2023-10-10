@@ -1,4 +1,5 @@
 import Nav from "../components/nav";
+import Footer from "../components/footer";
 import Link from "next/link";
 import links from "../public/data/links.json";
 
@@ -29,6 +30,7 @@ export default function Links() {
           })}
         </div>
       </div>
+      <Footer currentPage="Overview" />
     </div>
   );
 }

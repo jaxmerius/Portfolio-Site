@@ -1,4 +1,5 @@
 import Nav from "../components/nav";
+import Footer from "../components/footer";
 import Link from "next/link";
 
 export default function Overview() {
@@ -166,6 +167,7 @@ export default function Overview() {
           />
         </div>
       </div>
+      <Footer currentPage="Overview" />
     </div>
   );
 }

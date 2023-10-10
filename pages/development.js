@@ -1,4 +1,5 @@
 import Nav from "../components/nav";
+import Footer from "../components/footer";
 import Link from "next/link";
 import videos from "../public/data/videos.json";
 
@@ -62,6 +63,7 @@ export default function Development() {
           })}
         </div>
       </div>
+      <Footer currentPage="Overview" />
     </div>
   );
 }

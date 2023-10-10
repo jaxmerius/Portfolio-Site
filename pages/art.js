@@ -1,4 +1,5 @@
 import Nav from "../components/nav";
+import Footer from "../components/footer";
 import { useState } from "react";
 import Link from "next/link";
 import ArtData from "../public/data/art.json";
@@ -87,6 +88,7 @@ export default function Art() {
           })}
         </div>
       </div>
+      <Footer currentPage="Overview" />
     </div>
   );
 }
