@@ -63,7 +63,7 @@ export default function Development() {
           })}
         </div>
       </div>
-      <Footer currentPage="Overview" />
+      <Footer currentPage="Development" />
     </div>
   );
 }

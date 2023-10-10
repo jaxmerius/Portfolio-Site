@@ -32,7 +32,7 @@ export default function Links() {
           </div>
         </div>
       </div>
-      <Footer currentPage="Overview" />
+      <Footer currentPage="Links" />
     </div>
   );
 }

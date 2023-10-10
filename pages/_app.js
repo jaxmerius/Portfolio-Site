@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="/thumbnail.png" />
       </Head>
       <Analytics />
-      <Component {...pageProps} />
+      <Component {...pageProps}></Component>
     </>
   );
 }

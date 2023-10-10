@@ -88,7 +88,7 @@ export default function Art() {
           })}
         </div>
       </div>
-      <Footer currentPage="Overview" />
+      <Footer currentPage="Art" />
     </div>
   );
 }

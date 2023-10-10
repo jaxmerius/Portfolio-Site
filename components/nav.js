@@ -22,7 +22,7 @@ export default function Nav({ currentPage }) {
   };
 
   return (
-    <nav className="fixed bg-primary-700 w-full border-b border-green-800 z-10">
+    <nav className="fixed bg-primary-700 w-full border-b border-secondary-800 z-10">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <Link
