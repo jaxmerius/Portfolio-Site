@@ -33,7 +33,6 @@ export default function Footer({ currentPage }) {
             <FooterLink value="Overview" loc="/" />
             <FooterLink value="Art" loc="/art" />
             <FooterLink value="Development" loc="/development" />
-            <FooterLink value="Links" loc="/links" />
           </div>
         </div>
         <div class="sm:flex sm:items-center sm:justify-between mt-6 lg:mt-8">

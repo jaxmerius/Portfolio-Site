@@ -44,7 +44,6 @@ export default function Nav({ currentPage }) {
                 <NavButton value="Overview" loc="/" />
                 <NavButton value="Art" loc="/art" />
                 <NavButton value="Development" loc="/development" />
-                <NavButton value="Links" loc="/links" />
               </div>
             </div>
           </div>
@@ -55,7 +54,6 @@ export default function Nav({ currentPage }) {
           <NavButton value="Overview" loc="/" />
           <NavButton value="Art" loc="/art" />
           <NavButton value="Development" loc="/development" />
-          <NavButton value="Links" loc="/links" />
         </div>
       </div>
     </nav>
