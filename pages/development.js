@@ -4,11 +4,8 @@ import videos from "../public/data/videos.json";
 
 export default function Development() {
   return (
-    <Container currentPage={"Development"}>
+    <Container currentPage={"dev"}>
       <div className="lg:grid-cols-2 custGrid">
-        <div className="lg:col-span-2 text-4xl font-bold">
-          Development Projects
-        </div>
         {videos.map((video, idx) => {
           return (
             <div key={idx} className="bubble">
