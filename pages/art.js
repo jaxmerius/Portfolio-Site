@@ -8,7 +8,7 @@ export default function Art() {
   const [modalImg, setModalImg] = useState();
 
   return (
-    <Container currentPage={"Art"}>
+    <Container currentPage={"art"}>
       <div className="lg:grid-cols-3 md:grid-cols-2 custGrid">
         {showModal ? (
           <>
@@ -31,9 +31,6 @@ export default function Art() {
             <div className="opacity-50 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
-        <div className="lg:col-span-3 md:col-span-2 text-4xl font-bold">
-          Artwork
-        </div>
         {ArtData.map((img, idx) => {
           return (
             <div key={idx} className="relative z-0 flex flex-col bubble">

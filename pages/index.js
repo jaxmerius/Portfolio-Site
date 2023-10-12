@@ -16,7 +16,7 @@ export default function Overview() {
   };
 
   return (
-    <Container currentPage={"Overview"}>
+    <Container currentPage={"overview"}>
       <div className="md:grid-cols-6 custGrid">
         <div className="text-secondary-400 md:col-span-2 text-5xl sm:text-6xl md:text-7xl font-bold flex m-auto">
           About Me
@@ -25,14 +25,12 @@ export default function Overview() {
           title=""
           content={
             <div>
-              My name is Ethan Mathes, and this is my website! I built it from
-              scratch so you can check out a bunch of the cool stuff I've done
-              in college, as well as my work experience. The projects and pieces
-              displayed here are a showcase of my talents, skills, and knowledge
-              acquired through my studies. I have a Bachelor's in Games,
-              Interactive Media, and Mobile with a minor in Information
-              Technology Management. I am currently working as a Software QA
-              Tester at
+              Hi, I'm Ethan Mathes! I'm a front-end developer with a passion for
+              video games. The projects and pieces displayed here are a showcase
+              of my talents, skills, and knowledge acquired through my studies.
+              I have a Bachelor's in Games, Interactive Media, and Mobile with a
+              minor in Information Technology Management. I am currently working
+              as a Software QA Tester at
               <Link
                 href="https://www.lionbridge.com"
                 target="_blank"
