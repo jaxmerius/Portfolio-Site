@@ -72,7 +72,7 @@ export default function Art() {
                 </>
               ) : null}
               <img
-                src="/magnify.png"
+                src="/magnify.svg"
                 alt="magnify"
                 className="absolute bottom-1.5 md:bottom-2 right-1.5 md:right-2 w-4 md:w-6 cursor-pointer"
                 onClick={() => {

@@ -1,12 +1,12 @@
 [
   {
-    "href": "https://www.linkedin.com/in/ethanmathes",
-    "img": "linkedin",
-    "value": "linkedin.com/in/ethanmathes"
-  },
-  {
     "href": "https://www.github.com/jaxmerius",
     "img": "github",
     "value": "github.com/jaxmerius"
+  },
+  {
+    "href": "https://www.linkedin.com/in/ethanmathes",
+    "img": "linkedin",
+    "value": "linkedin.com/in/ethanmathes"
   }
 ]

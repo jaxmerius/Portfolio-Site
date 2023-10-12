@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Ethan Mathes</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo.svg" />
         <meta property="og:image" content="/thumbnail.png" />
       </Head>
       <Analytics />

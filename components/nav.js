@@ -31,7 +31,7 @@ export default function Nav({ currentPage }) {
           >
             <>
               <div className="flex-shrink-0 flex items-center">
-                <img className="block h-8 w-auto" src="/logo.png" alt="Logo" />
+                <img className="block h-8 w-auto" src="/logo.svg" alt="Logo" />
               </div>
               <div className="flex-shrink-0 flex items-center text-primary-300 px-3 py-2 rounded-md text-2xl">
                 ETHAN MATHES
