@@ -59,6 +59,7 @@ export default function Container({ currentPage, children }) {
             currentPage == item.url ? "text-secondary-400" : "text-primary-400",
             "block uppercase px-3 pt-2 pb-3 rounded-md font-bold focus:outline-none"
           )}
+          onClick={() => setMobileMenuOpen(false)}
         >
           {item.name}
         </Link>
@@ -127,10 +128,7 @@ export default function Container({ currentPage, children }) {
               ></button>
             </div>
             <div className="divide-y divide-secondary-400">
-              <div
-                onClick={() => setMobileMenuOpen(false)}
-                className="-mx-3 space-y-2 py-6"
-              >
+              <div className="-mx-3 space-y-2 py-6">
                 <MobileNavLinks />
               </div>
               <Disclosure as="div" className="py-6">
