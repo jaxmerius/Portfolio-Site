@@ -1,23 +1,10 @@
 import Link from "next/link";
-import { Fragment, useState } from "react";
-import {
-  Dialog,
-  Disclosure,
-  Menu,
-  Popover,
-  Transition,
-} from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { useState } from "react";
+import { Dialog, Disclosure, Menu, Popover } from "@headlessui/react";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
-const languages = [
-  {
-    name: "English",
-  },
-  {
-    name: "Coming Soon!",
-  },
-];
+const languages = [{ name: "English" }, { name: "Coming Soon!" }];
 
 const navLinks = [
   { name: "dev", url: "/development" },
@@ -50,7 +37,7 @@ export default function Container({ currentPage, children }) {
           key={idx}
           href={item.url}
           className={classNames(
-            currentPage == item.name
+            currentPage == item.url
               ? "underline decoration-4 underline-offset-4"
               : "",
             "hover:bg-primary-700 uppercase px-3 pt-2 pb-3 rounded-md font-bold text-secondary-400 focus:outline-none"
@@ -69,9 +56,7 @@ export default function Container({ currentPage, children }) {
           key={idx}
           href={item.url}
           className={classNames(
-            currentPage == item.name
-              ? "text-secondary-400"
-              : "text-primary-400",
+            currentPage == item.url ? "text-secondary-400" : "text-primary-400",
             "block uppercase px-3 pt-2 pb-3 rounded-md font-bold focus:outline-none"
           )}
         >
@@ -134,54 +119,42 @@ export default function Container({ currentPage, children }) {
           onClose={setMobileMenuOpen}
         >
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-secondary-900/10">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5">
-                <img
-                  className="h-8 sm:h-12 w-auto"
-                  src="/logo.svg"
-                  alt="Logo"
-                />
-              </Link>
+            <div className="flex items-center justify-end">
               <button
-                type="button"
-                className="-m-2.5 rounded-md p-2.5 text-secondary-700"
+                className="-m-2.5 h-12 rounded-md p-2.5 text-secondary-700"
                 onClick={() => setMobileMenuOpen(false)}
-              >
-                <XMarkIcon className="h-10 sm:h-12 w-auto" />
-              </button>
+              ></button>
             </div>
             <div className="divide-y divide-secondary-400">
               <div className="-mx-3 space-y-2 py-6">
                 <MobileNavLinks />
               </div>
-              <div className="py-6">
-                <Disclosure as="div">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex w-full items-center justify-between py-2 font-bold text-secondary-400 uppercase">
-                        English
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? "rotate-180" : "",
-                            "h-5 w-5 flex-none"
-                          )}
-                        />
-                      </Disclosure.Button>
-                      <Disclosure.Panel className="mt-2 space-y-2">
-                        {languages.map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="div"
-                            className="block py-2 px-3 font-bold text-primary-400 uppercase"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-              </div>
+              <Disclosure as="div" className="py-6">
+                {({ open }) => (
+                  <>
+                    <Disclosure.Button className="flex w-full items-center justify-between py-2 font-bold text-secondary-400 uppercase">
+                      English
+                      <ChevronDownIcon
+                        className={classNames(
+                          open ? "rotate-180" : "",
+                          "h-5 w-5 flex-none"
+                        )}
+                      />
+                    </Disclosure.Button>
+                    <Disclosure.Panel className="mt-2 space-y-2">
+                      {languages.map((item) => (
+                        <Disclosure.Button
+                          key={item.name}
+                          as="div"
+                          className="block py-2 px-3 font-bold text-primary-400 uppercase"
+                        >
+                          {item.name}
+                        </Disclosure.Button>
+                      ))}
+                    </Disclosure.Panel>
+                  </>
+                )}
+              </Disclosure>
             </div>
           </Dialog.Panel>
         </Dialog>
@@ -190,24 +163,22 @@ export default function Container({ currentPage, children }) {
         </div>
       </div>
       <footer className="w-full shrink-0">
-        <div className="max-w-7xl mx-auto py-4 md:py-8 px-2 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <span className="text-sm text-primary-400 sm:text-center">
-              © {new Date().getFullYear()} Ethan Mathes. All Rights Reserved.
-            </span>
-            <div className="flex space-x-2 justify-center">
-              {footerLinks.map((item, idx) => {
-                return (
-                  <Link key={idx} href={item.href} target="_blank">
-                    <img
-                      className="h-5 w-auto"
-                      src={"/" + item.img + ".svg"}
-                      alt={item.img}
-                    />
-                  </Link>
-                );
-              })}
-            </div>
+        <div className="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:py-6 lg:px-8">
+          <span className="text-sm text-primary-400 sm:text-center">
+            © {new Date().getFullYear()} Ethan Mathes. All Rights Reserved.
+          </span>
+          <div className="flex space-x-2 justify-center">
+            {footerLinks.map((item, idx) => {
+              return (
+                <Link key={idx} href={item.href} target="_blank">
+                  <img
+                    className="h-5 w-auto"
+                    src={"/" + item.img + ".svg"}
+                    alt={item.img}
+                  />
+                </Link>
+              );
+            })}
           </div>
         </div>
       </footer>
