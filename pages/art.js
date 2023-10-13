@@ -15,7 +15,7 @@ export default function Art() {
             onClick={() => setShowModal(false)}
           >
             <div className="relative w-auto max-w-sm sm:max-w-l md:max-w-xl lg:max-w-3xl">
-              <div className="bubble">
+              <div className="bubble bg-primary-800">
                 <button
                   className="absolute right-0.5 sm:right-0.5 md:right-0 -top-1.5 sm:-top-2 md:-top-2.5 lg:-top-3 focus:outline-none text-red-700 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold hover:text-red-500"
                   onClick={() => setShowModal(false)}
