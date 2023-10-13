@@ -53,22 +53,6 @@ export default function Overview() {
           />
         </div>
       </div>
-      <Title value="Technical Skills" />
-      <Bubble
-        title="Languages/Frameworks"
-        content="Next.js, React, React Native, TypeScript, C#, C++"
-        colSpan="md:col-span-2"
-      />
-      <Bubble
-        title="Art Software"
-        content="Photoshop, Premier Pro, Maya, Roadkill, Substance Painter"
-        colSpan="md:col-span-2"
-      />
-      <Bubble
-        title="Other Relevant Software"
-        content="Unity, Unreal Engine, GitHub, Jira"
-        colSpan="md:col-span-2"
-      />
       <Title value="Work Experience" />
       <Bubble
         title="GAMES TESTER (LIONBRIDGE GAMES, JULY 2022 - PRESENT)"
@@ -145,6 +129,22 @@ export default function Overview() {
           </div>
         }
         colSpan="md:col-span-3"
+      />
+      <Title value="Technical Skills" />
+      <Bubble
+        title="Languages/Frameworks"
+        content="Next.js, React, React Native, TypeScript, C#, C++"
+        colSpan="md:col-span-2"
+      />
+      <Bubble
+        title="Art Software"
+        content="Photoshop, Premier Pro, Maya, Roadkill, Substance Painter"
+        colSpan="md:col-span-2"
+      />
+      <Bubble
+        title="Other Relevant Software"
+        content="Unity, Unreal Engine, GitHub, Jira"
+        colSpan="md:col-span-2"
       />
     </div>
   );

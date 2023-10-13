@@ -83,7 +83,7 @@ export default function Container({ currentPage, children }) {
             <div className="flex lg:hidden">
               <button
                 type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary-700"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-secondary-400"
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <Bars3Icon className="h-10 sm:h-12 w-auto" />
@@ -121,7 +121,7 @@ export default function Container({ currentPage, children }) {
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-secondary-900/10">
             <div className="flex items-center justify-end">
               <button
-                className="-m-2.5 h-12 rounded-md p-2.5 text-secondary-700"
+                className="-m-2.5 h-12 rounded-md p-2.5 text-secondary-400"
                 onClick={() => setMobileMenuOpen(false)}
               ></button>
             </div>
