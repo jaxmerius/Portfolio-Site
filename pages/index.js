@@ -4,14 +4,16 @@ export default function Overview() {
   const Bubble = ({ title, content, colSpan }) => {
     return (
       <div className={colSpan + " bubble"}>
-        <div className="font-bold text-secondary-400">{title}</div>
+        <div className="font-bold text-secondary-400 uppercase">{title}</div>
         <div className="mt-2">{content}</div>
       </div>
     );
   };
 
   const Title = ({ value }) => {
-    return <div className="md:col-span-6 text-3xl font-bold">{value}</div>;
+    return (
+      <div className="md:col-span-6 text-3xl font-bold uppercase">{value}</div>
+    );
   };
 
   return (
@@ -29,29 +31,28 @@ export default function Overview() {
           </div>
         </div>
       </div>
-      <div className="bubble md:col-span-6">
-        <div
+      <div
+        style={{
+          position: "relative",
+          paddingBottom: "56.25%",
+          height: 0,
+        }}
+        className="bubble md:col-span-6 overflow-hidden"
+      >
+        <iframe
           style={{
-            position: "relative",
-            paddingBottom: "56.25%",
-            height: 0,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
           }}
-        >
-          <iframe
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-            }}
-            title="Demo Video"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/FjZ-UJ0WagY"
-            allowFullScreen
-          />
-        </div>
+          title="Demo Video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/FjZ-UJ0WagY"
+          allowFullScreen
+        />
       </div>
       <Title value="Work Experience" />
       <Bubble
