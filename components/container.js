@@ -118,6 +118,7 @@ export default function Container({ currentPage, children }) {
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
         >
+          <div className="fixed inset-0 z-10" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-primary-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-secondary-900/10">
             <div className="flex items-center justify-end">
               <button
@@ -126,7 +127,10 @@ export default function Container({ currentPage, children }) {
               ></button>
             </div>
             <div className="divide-y divide-secondary-400">
-              <div className="-mx-3 space-y-2 py-6">
+              <div
+                onClick={() => setMobileMenuOpen(false)}
+                className="-mx-3 space-y-2 py-6"
+              >
                 <MobileNavLinks />
               </div>
               <Disclosure as="div" className="py-6">
