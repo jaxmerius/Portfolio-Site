@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bubble {
-  @apply flex flex-col bg-primary-800 border border-green-800 rounded-lg p-4 sm:p-6;
+  @apply flex flex-col border border-green-400 rounded-lg p-4 sm:p-6;
 }
 
 .custGrid {
