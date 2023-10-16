@@ -11,5 +11,5 @@
 }
 
 .link {
-  @apply text-secondary-500 hover:text-secondary-300;
+  @apply text-secondary-400 hover:text-secondary-200;
 }

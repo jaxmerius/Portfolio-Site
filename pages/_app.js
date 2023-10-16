@@ -10,14 +10,22 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const languages = [
   { name: "English", code: "en" },
-  { name: "Coming Soon!", code: "es" },
+  { name: "Español", code: "es" },
 ];
 
 const navLinks = [
-  { name: "dev", url: "/development" },
-  { name: "overview", url: "/" },
-  { name: "art", url: "/art" },
+  { name: { en: "Dev", es: "Desarrollo" }, url: "/development" },
+  {
+    name: { en: "Overview", es: "Visión de Conjunto" },
+    url: "/",
+  },
+  { name: { en: "Art", es: "Arte" }, url: "/art" },
 ];
+
+const footerLegal = {
+  en: "All Rights Reserved.",
+  es: "Reservados todos los derechos.",
+};
 
 const footerLinks = [
   {
@@ -39,16 +47,7 @@ function MyApp({ Component, pageProps }) {
 
   const router = useRouter();
   const { pathname, asPath, query } = router;
-
-  const getLanguageName = () => {
-    var language = languages.filter((language) => {
-      return language.code === router.locale;
-    })[0].name;
-
-    console.log(language);
-  };
-
-  getLanguageName();
+  const loc = router.locale;
 
   const NavLinks = () => {
     return navLinks.map((item, idx) => {
@@ -63,7 +62,7 @@ function MyApp({ Component, pageProps }) {
             "hover:bg-primary-700 uppercase px-3 pt-2 pb-3 rounded-md font-bold text-secondary-400 focus:outline-none"
           )}
         >
-          {item.name}
+          {item.name[loc]}
         </Link>
       );
     });
@@ -95,7 +94,23 @@ function MyApp({ Component, pageProps }) {
         <title>Ethan Mathes</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/logo.svg" />
         <meta name="description" content="Portfolio Site for Ethan Mathes" />
+        <link rel="image_src" href="/thumbnail.png" />
+        <meta property="og:title" content="Ethan Mathes" />
+        <meta
+          property="og:description"
+          content="Portfolio Site for Ethan Mathes"
+        />
+        <meta property="og:type" content="website" />
         <meta property="og:image" content="/thumbnail.png" />
+        <meta property="og:image:url" content="/thumbnail.png" />
+        <meta property="og:image:secure_url" content="/thumbnail.png" />
+        <meta name="twitter:title" content="Ethan Mathes" />
+        <meta
+          name="twitter:description"
+          content="Portfolio Site for Ethan Mathes"
+        />
+        <meta name="twitter:image" content="/thumbnail.png" />
+        <meta name="twitter:url" content="https://www.ethanmathes.com" />
       </Head>
       <Analytics />
       <div className="min-h-screen h-full flex flex-col bg-primary-900 text-primary-300">
@@ -137,7 +152,14 @@ function MyApp({ Component, pageProps }) {
                   <Menu.Items className="absolute mt-14 rounded-md bg-primary-700">
                     {languages.map((item) => (
                       <Menu.Item key={item.name}>
-                        <button className="block hover:text-secondary-400 uppercase px-3 py-2 font-bold text-primary-400">
+                        <button
+                          className="block hover:text-secondary-400 uppercase px-3 py-2 font-bold text-primary-400"
+                          onClick={() => {
+                            router.push({ pathname, query }, asPath, {
+                              locale: item.code,
+                            });
+                          }}
+                        >
                           {item.name}
                         </button>
                       </Menu.Item>
@@ -201,7 +223,7 @@ function MyApp({ Component, pageProps }) {
         <footer className="w-full shrink-0">
           <div className="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:py-6 lg:px-8">
             <span className="text-sm text-primary-400 sm:text-center">
-              © {new Date().getFullYear()} Ethan Mathes. All Rights Reserved.
+              © {new Date().getFullYear()} Ethan Mathes. {footerLegal[loc]}
             </span>
             <div className="flex space-x-2 justify-center">
               {footerLinks.map((item, idx) => {
