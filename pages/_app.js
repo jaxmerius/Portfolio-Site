@@ -11,6 +11,7 @@ import { ChevronDownIcon } from "@heroicons/react/20/solid";
 const languages = [
   { name: "English", code: "en" },
   { name: "Español", code: "es" },
+  { name: "Coming Soon!", code: "" },
 ];
 
 const navLinks = [
