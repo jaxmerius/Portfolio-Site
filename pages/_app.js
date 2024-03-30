@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
 import { useState } from "react";
 import { Dialog, Disclosure, Menu, Popover } from "@headlessui/react";
@@ -114,6 +115,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:url" content="https://www.ethanmathes.com" />
       </Head>
       <Analytics />
+      <SpeedInsights />
       <div className="min-h-screen h-full flex flex-col bg-primary-900 text-primary-300">
         <div className="flex-[1_0_auto]">
           <nav className="fixed w-full z-20 top-0 left-0 bg-primary-900">
