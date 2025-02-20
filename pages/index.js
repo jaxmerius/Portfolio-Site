@@ -5,26 +5,60 @@ const content = {
   hero: {
     header: { en: "Hi, I'm Ethan!", es: "¡Hola, soy Ethan!" },
     sub: {
-      en: "I'm a front-end developer with a passion for video games.",
-      es: "Soy un desarrollador front-end apasionado por los videojuegos.",
+      en: "I'm a Software Test Engineer/Front-End Developer with a passion for video games.",
+      es: "Soy un Ingeniero de Pruebas de Software/Desarrollador Front-End con pasión por los videojuegos.",
     },
   },
   experience: {
     header: { en: "Work Experience", es: "Experiencia Laboral" },
     jobs: {
       lionbridge: {
-        header: {
-          en: "GAMES TESTER (LIONBRIDGE GAMES, JULY 2022 - PRESENT)",
-          es: "PROBADOR DE JUEGOS (LIONBRIDGE GAMES, JULIO 2022 - PRESENTE)",
-        },
-        desc: {
-          first: {
-            en: "Currently working as a Software QA Tester at",
-            es: "Actualmente trabajando como Tester de QA de Software en",
+        ste: {
+          header: {
+            en: "SENIOR TEST ENGINEER (LIONBRIDGE GAMES, APRIL 2024 - PRESENT)",
+            es: "INGENIERO DE PRUEBAS DE SOFTWARE (LIONBRIDGE GAMES, ABRIL 2024 - PRESENTE)",
           },
-          second: {
-            en: "since July of 2022. The responsibilities of this job include performing directed and ad-hoc functionality testing on third-party software with the intent to find and report bugs and other issues. Testing is done on current and previous gen game consoles as well as PC and mobile devices, and reporting of bugs is done in JIRA. Most notably worked on Modern Warfare II (2022). Due to NDA I am unable to disclose information regarding other projects.",
-            es: "desde julio de 2022. Las responsabilidades de este trabajo incluyen realizar pruebas de funcionalidad dirigidas y ad hoc en software de terceros con la intención de encontrar e informar errores y otros problemas. Las pruebas se realizan en consolas de juegos de generación actual y anterior, así como en PC y dispositivos móviles, y los informes de errores se realizan en JIRA. Más destacado trabajado en Modern Warfare II (2022). Debido a la NDA, no puedo revelar información sobre otros proyectos.",
+          desc: {
+            first: {
+              en: "Currently working as a Software Test Engineer at",
+              es: "Actualmente trabajando como Ingeniero de Pruebas de Software en",
+            },
+            second: {
+              en: "since April of 2024. Writing and executing test plans/cases, testing and documenting bugs/glitches in both deployed builds and in-engine, as well as providing informal technical leadership, support, and feedback to junior team members. Testing on PC. Using TestRail for test plan/case writing, as well as Hansoft for bug reporting.",
+              es: "desde abril de 2024. Escribir y ejecutar planes/casos de prueba, probar y documentar errores/fallos tanto en las versiones implementadas como en el motor, además de brindar liderazgo técnico informal, soporte y retroalimentación a los miembros del equipo junior. Pruebas en PC. Usar TestRail para redactar planes de prueba/casos, así como Hansoft para informar errores.",
+            },
+          },
+        },
+        ta2: {
+          header: {
+            en: "TEST ASSOCIATE 2 (LIONBRIDGE GAMES, MAY 2023 - APRIL 2024)",
+            es: "ASOCIADO DE PRUEBA 2 (LIONBRIDGE GAMES, MAYO 2023 - ABRIL 2024)",
+          },
+          desc: {
+            first: {
+              en: "Worked as a Test Associate 2 at",
+              es: "Trabajó como Asociado de Pruebas 2 en",
+            },
+            second: {
+              en: "from May of 2023 until being promoted to Senior Test Engineer in April of 2024. Performed both directed and ad-hoc functionality testing with a high level of autonomy on third-party video game and web software to find and report bugs/glitches. Tested on current and previous gen game consoles as well as PC and mobile. Used Jira for bug reporting.",
+              es: "desde mayo de 2023 hasta mi ascenso a Ingeniero Senior de Pruebas en abril de 2024. Realicé pruebas de funcionalidad tanto dirigidas como ad-hoc con un alto nivel de autonomía en videojuegos y software web de terceros para encontrar e informar errores/fallos. Probado en consolas de juegos de generación actual y anterior, así como en PC y dispositivos móviles. Usé Jira para informar errores.",
+            },
+          },
+        },
+        ta1: {
+          header: {
+            en: "TEST ASSOCIATE 1 (LIONBRIDGE GAMES, JULY 2022 - MAY 2023)",
+            es: "ASOCIADO DE PRUEBA 1 (LIONBRIDGE GAMES, JULIO 2022 - MAYO 2023)",
+          },
+          desc: {
+            first: {
+              en: "Worked as a Test Associate 1 at",
+              es: "Trabajó como Asociado de Pruebas 1 en",
+            },
+            second: {
+              en: "from July of 2022 until being promoted to Test Associate 2 in May of 2023. Performed both directed and ad-hoc functionality testing on third-party video game software to find and report bugs/glitches. Tested on current and previous gen game consoles as well as PC. Used Jira for bug reporting.",
+              es: "desde julio de 2022 hasta su ascenso a Asociado de Pruebas 2 en mayo de 2023. Realicé pruebas de funcionalidad tanto dirigidas como ad-hoc en software de videojuegos de terceros para encontrar e informar errores/fallos. Probado en consolas de juegos de generación actual y anterior, así como en PC. Usé Jira para informar errores.",
+            },
           },
         },
       },
@@ -150,18 +184,52 @@ export default function Overview() {
       </div>
       <Title value={content.experience.header[loc]} />
       <Bubble
-        title={content.experience.jobs.lionbridge.header[loc]}
+        title={content.experience.jobs.lionbridge.ste.header[loc]}
         content={
           <div>
-            {content.experience.jobs.lionbridge.desc.first[loc]}
+            {content.experience.jobs.lionbridge.ste.desc.first[loc]}
             <Link
-              href="https://www.lionbridge.com"
+              href="https://games.lionbridge.com/"
               target="_blank"
               className="link"
             >
-              <> Lionbridge </>
+              <> LIONBRIDGE GAMES </>
             </Link>
-            {content.experience.jobs.lionbridge.desc.second[loc]}
+            {content.experience.jobs.lionbridge.ste.desc.second[loc]}
+          </div>
+        }
+        colSpan="md:col-span-6"
+      />
+      <Bubble
+        title={content.experience.jobs.lionbridge.ta2.header[loc]}
+        content={
+          <div>
+            {content.experience.jobs.lionbridge.ta2.desc.first[loc]}
+            <Link
+              href="https://games.lionbridge.com/"
+              target="_blank"
+              className="link"
+            >
+              <> LIONBRIDGE GAMES </>
+            </Link>
+            {content.experience.jobs.lionbridge.ta2.desc.second[loc]}
+          </div>
+        }
+        colSpan="md:col-span-6"
+      />
+      <Bubble
+        title={content.experience.jobs.lionbridge.ta1.header[loc]}
+        content={
+          <div>
+            {content.experience.jobs.lionbridge.ta1.desc.first[loc]}
+            <Link
+              href="https://games.lionbridge.com/"
+              target="_blank"
+              className="link"
+            >
+              <> LIONBRIDGE GAMES </>
+            </Link>
+            {content.experience.jobs.lionbridge.ta1.desc.second[loc]}
           </div>
         }
         colSpan="md:col-span-6"
@@ -184,7 +252,7 @@ export default function Overview() {
               target="_blank"
               className="link"
             >
-              <> Five Pencil Method </>
+              <> 5 Pencil Method </>
             </Link>
             {content.experience.jobs.stackfoundry.desc.third[loc]}
           </div>
@@ -218,12 +286,12 @@ export default function Overview() {
       />
       <Bubble
         title={content.skills.types.art[loc]}
-        content="Photoshop, Premier Pro, Maya, Roadkill, Substance Painter"
+        content="Photoshop, Premier Pro, Maya, Blender, Substance Painter"
         colSpan="md:col-span-2"
       />
       <Bubble
         title={content.skills.types.other[loc]}
-        content="Unity, Unreal Engine, GitHub, Jira"
+        content="Unity, Unreal Engine, GitHub, Jira, Hansoft, Testrail, Microsoft Office"
         colSpan="md:col-span-2"
       />
     </div>
