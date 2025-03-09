@@ -84,7 +84,7 @@ function MyApp({ Component, pageProps }) {
           )}
           onClick={() => setMobileMenuOpen(false)}
         >
-          {item.name}
+          {item.name[loc]}
         </Link>
       );
     });
