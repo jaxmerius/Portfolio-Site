@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Dialog, Disclosure, Menu, Popover } from "@headlessui/react";
 import { Bars3Icon } from "@heroicons/react/24/outline";
@@ -122,9 +123,11 @@ function MyApp({ Component, pageProps }) {
             <div className="mx-auto flex max-w-7xl items-center justify-between py-4 px-6 lg:py-6 lg:px-8">
               <div className="flex lg:flex-1">
                 <Link href="/">
-                  <img
-                    className="h-8 sm:h-12 w-auto"
+                  <Image
                     src="/logo.svg"
+                    width={100}
+                    height={100}
+                    className="h-8 sm:h-12 w-auto"
                     alt="Logo"
                   />
                 </Link>
@@ -232,9 +235,11 @@ function MyApp({ Component, pageProps }) {
               {footerLinks.map((item, idx) => {
                 return (
                   <Link key={idx} href={item.href} target="_blank">
-                    <img
-                      className="h-5 w-auto"
+                    <Image
                       src={"/" + item.img + ".svg"}
+                      width={100}
+                      height={100}
+                      className="h-5 w-auto"
                       alt={item.img}
                     />
                   </Link>

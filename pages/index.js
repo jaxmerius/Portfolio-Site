@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
+import { YouTubeEmbed } from "@next/third-parties/google";
 
 const content = {
   hero: {
@@ -13,19 +15,35 @@ const content = {
     header: { en: "Work Experience", es: "Experiencia Laboral" },
     jobs: {
       lionbridge: {
-        ste: {
+        ste2: {
           header: {
-            en: "SENIOR TEST ENGINEER (LIONBRIDGE GAMES, APRIL 2024 - PRESENT)",
-            es: "INGENIERO DE PRUEBAS DE SOFTWARE (LIONBRIDGE GAMES, ABRIL 2024 - PRESENTE)",
+            en: "SOFTWARE TEST ENGINEER 2 (LIONBRIDGE GAMES, MARCH 2025 - PRESENT)",
+            es: "INGENIERO DE PRUEBAS DE SOFTWARE (LIONBRIDGE GAMES, MARZO 2025 - PRESENTE)",
           },
           desc: {
             first: {
-              en: "Currently working as a Software Test Engineer at",
-              es: "Actualmente trabajando como Ingeniero de Pruebas de Software en",
+              en: "Currently working as a Software Test Engineer 2 at",
+              es: "Actualmente trabaja como ingeniero de pruebas de software 2 en",
             },
             second: {
-              en: "since April of 2024. Writing and executing test plans/cases, testing and documenting bugs/glitches in both deployed builds and in-engine, as well as providing informal technical leadership, support, and feedback to junior team members. Testing on PC. Using TestRail for test plan/case writing, as well as Hansoft for bug reporting.",
-              es: "desde abril de 2024. Escribir y ejecutar planes/casos de prueba, probar y documentar errores/fallos tanto en las versiones implementadas como en el motor, además de brindar liderazgo técnico informal, soporte y retroalimentación a los miembros del equipo junior. Pruebas en PC. Usar TestRail para redactar planes de prueba/casos, así como Hansoft para informar errores.",
+              en: "since March of 2025. Working directly with developers to create and delegat test plans/cases according to specs, testing and documenting bugs/glitches in both deployed builds and in-engine, as well as providing informal technical leadership, support, and feedback to testers. Testing on PC. Using TestRail for test plan/case writing, as well as Jira for bug reporting.",
+              es: "desde marzo de 2025. Trabajo directamente con desarrolladores para crear y delegar planes/casos de prueba según las especificaciones, probando y documentando errores/fallos tanto en compilaciones implementadas como en el motor, además de proporcionar liderazgo técnico informal, soporte y retroalimentación a los testers. Realizo pruebas en PC. Uso TestRail para la redacción de planes/casos de prueba, así como Jira para el reporte de errores.",
+            },
+          },
+        },
+        ste: {
+          header: {
+            en: "SOFTWARE TEST ENGINEER (LIONBRIDGE GAMES, APRIL 2024 - MARCH 2025)",
+            es: "INGENIERO DE PRUEBAS DE SOFTWARE (LIONBRIDGE GAMES, ABRIL 2024 - MARZO 2025)",
+          },
+          desc: {
+            first: {
+              en: "Worked as a Software Test Engineer at",
+              es: "Trabajó como ingeniero de pruebas de software en",
+            },
+            second: {
+              en: "from April of 2024 to March of 2025. Writing and executing test plans/cases, testing and documenting bugs/glitches in both deployed builds and in-engine, as well as providing informal technical leadership, support, and feedback to testers. Testing on PC. Using TestRail for test plan/case writing, as well as Hansoft for bug reporting.",
+              es: "de abril de 2024 a marzo de 2025. Redacción y ejecución de planes/casos de prueba, pruebas y documentación de errores/fallos tanto en compilaciones implementadas como en el motor, además de proporcionar liderazgo técnico informal, soporte y retroalimentación a los evaluadores. Pruebas en PC. Uso de TestRail para la redacción de planes/casos de prueba, así como de Hansoft para el reporte de errores.",
             },
           },
         },
@@ -149,7 +167,7 @@ export default function Overview() {
       <div className="-mt-20 sm:-mt-24 h-[100vh] w-full md:col-span-6 flex justify-center items-center">
         <div className="space-y-4">
           <div className="border-4 border-green-400 w-64 sm:w-72 md:w-96 mx-auto rounded-full overflow-hidden">
-            <img src={"/profile.png"} alt="Profile" />
+            <Image src={"/profile.png"} preload={true} width={500} height={500} alt="Profile" />
           </div>
           <div className="text-secondary-400 font-bold text-5xl sm:text-6xl md:text-7xl">
             {content.hero.header[loc]}
@@ -159,30 +177,32 @@ export default function Overview() {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          position: "relative",
-          paddingBottom: "56.25%",
-          height: 0,
-        }}
-        className="bubble md:col-span-6 overflow-hidden"
-      >
-        <iframe
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-          }}
-          title="Demo Video"
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/FjZ-UJ0WagY"
-          allowFullScreen
-        />
+      <div className="border border-green-400 rounded-lg md:col-span-6 overflow-hidden">
+        <div className="w-full aspect-video">
+          <YouTubeEmbed
+            videoid="FjZ-UJ0WagY"
+            style="width: 100%; height: 100%; max-width: 100%;"
+          />
+        </div>
       </div>
       <Title value={content.experience.header[loc]} />
+      <Bubble
+        title={content.experience.jobs.lionbridge.ste2.header[loc]}
+        content={
+          <div>
+            {content.experience.jobs.lionbridge.ste2.desc.first[loc]}
+            <Link
+              href="https://games.lionbridge.com/"
+              target="_blank"
+              className="link"
+            >
+              <> LIONBRIDGE GAMES </>
+            </Link>
+            {content.experience.jobs.lionbridge.ste2.desc.second[loc]}
+          </div>
+        }
+        colSpan="md:col-span-6"
+      />
       <Bubble
         title={content.experience.jobs.lionbridge.ste.header[loc]}
         content={

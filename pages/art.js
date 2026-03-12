@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 
 const content = {
   art: [
@@ -141,7 +142,7 @@ export default function Art() {
                 >
                   &times;
                 </button>
-                <img src={"/art/" + modalImg} alt={modalImg} />
+                <Image src={"/art/" + modalImg} width={1000} height={1000} alt={modalImg} />
               </div>
             </div>
           </div>
@@ -155,10 +156,12 @@ export default function Art() {
               {img.title[loc]}
             </div>
             <div className="my-4 flex-grow">
-              <img
+              <Image
                 src={"/art/" + img.name}
-                alt={img.name}
+                width={500}
+                height={500}
                 className="mx-auto cursor-pointer"
+                alt={img.name}
                 onClick={() => {
                   setModalImg(img.name);
                   setShowModal(true);
@@ -185,10 +188,12 @@ export default function Art() {
                 </div>
               </>
             ) : null}
-            <img
+            <Image
               src="/magnify.svg"
-              alt="magnify"
+              width={100}
+              height={100}
               className="absolute bottom-1.5 md:bottom-2 right-1.5 md:right-2 w-4 md:w-6 cursor-pointer"
+              alt="magnify"
               onClick={() => {
                 setModalImg(img.name);
                 setShowModal(true);
