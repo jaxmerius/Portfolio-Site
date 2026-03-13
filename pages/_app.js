@@ -115,8 +115,6 @@ function MyApp({ Component, pageProps }) {
         <meta name="twitter:image" content="/thumbnail.png" />
         <meta name="twitter:url" content="https://www.ethanmathes.com" />
       </Head>
-      <Analytics />
-      <SpeedInsights />
       <div className="min-h-screen h-full flex flex-col bg-primary-900 text-primary-300">
         <div className="flex-[1_0_auto]">
           <nav className="fixed w-full z-20 top-0 left-0 bg-primary-900">
@@ -224,6 +222,8 @@ function MyApp({ Component, pageProps }) {
           </Dialog>
           <div className="h-full flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 pb-5 sm:pb-10">
             <Component {...pageProps} />
+            <Analytics />
+            <SpeedInsights />
           </div>
         </div>
         <footer className="w-full shrink-0">
